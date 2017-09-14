@@ -1,0 +1,35 @@
+.get-started {
+  overflow: hidden;
+
+  .col-action {
+    text-align: left;
+
+    .flex-container {
+      align-items: flex-start;
+    }
+  }
+
+  .col-image {
+    overflow: visible;
+  }
+
+  h1 {
+    font-size: 4rem;
+    font-weight: 100;
+    margin: 0 0 .2rem;
+  }
+
+  p {
+    font-size: 2rem;
+    font-weight: 200;
+    margin: 0 0 2rem;
+  }
+
+  img {
+    width: 40rem;
+    height: auto;
+    max-width: none;
+    position: absolute;
+    left: 2rem;
+  }
+}

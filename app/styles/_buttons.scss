@@ -1,0 +1,77 @@
+.btn {
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  font-size: 0.84rem;
+  text-transform: none;
+  padding: 0.8rem 2rem;
+  margin: 0;
+
+  &.btn-rounded {
+    border-radius: 10rem;
+  }
+
+  &.btn-transparent {
+    border: 1px solid #fff;
+    background-color: transparent;
+    color: #fff !important;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.14);
+    }
+  }
+
+  &.btn-meteor {
+    border: 1px solid transparent;
+    color: #fff !important;
+
+    &,
+    &:hover {
+      background: linear-gradient(40deg, #f44336, #9c27b0);
+    }
+  }
+
+  &.btn-h20 {
+    border: 1px solid transparent;
+    color: #fff !important;
+
+    &,
+    &:hover {
+      background: linear-gradient(40deg, $caribe, $orlando);
+    }
+  }
+
+  &.btn-antares {
+    border: 1px solid transparent;
+    color: #fff !important;
+
+    &,
+    &:hover {
+      background: linear-gradient(40deg, #009688, #8BC34A);
+    }
+  }
+
+  &.btn-rz-1 {
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 1rem 3rem;
+  }
+
+  &.btn-rz-2 {
+    font-size: 1rem;
+    font-weight: 400;
+    display: block;
+    width: 10.454rem;
+    padding: 1rem 2rem;
+  }
+
+  &.btn-rz-3 {
+    font-size: .845rem;
+    display: inline-block;
+    width: 6.5rem;
+    padding: .7rem 1rem;
+  }
+
+  &.btn-al-le { text-align: left !important; }
+  &.btn-al-ce { text-align: center !important; }
+  &.btn-al-ri { text-align: right !important; }
+}

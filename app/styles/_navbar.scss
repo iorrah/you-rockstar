@@ -1,0 +1,12 @@
+.navbar {
+  background-color: #fff;
+  box-shadow: none;
+
+  &.affix-top {
+    display: none;
+  }
+
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,13 @@
+html,
+body,
+body > [class="ember-view"],
+header,
+section {
+  height: 100%;
+}
+
+.full-height {
+  max-height: none;
+  min-height: 37rem;
+  height: 100%;
+}
