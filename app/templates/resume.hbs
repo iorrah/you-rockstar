@@ -1,0 +1,32 @@
+<section class="resume">
+  <ul class="timeline">
+    {{#if isStepShown.pick}}
+      <li>
+        <span class="counter">1</span>
+        {{yr-pick-a-template
+          templates=templates
+          template=template
+          select='select'}}
+      </li>
+    {{/if}}
+
+    {{#if isStepShown.edit}}
+      <li>
+        <span class="counter">2</span>
+        {{resume/yr-edit-the-template
+          template=template
+          palettes=palettes
+          palette=palette
+          selectPalette='selectPalette'}}
+      </li>
+    {{/if}}
+
+    {{#if isStepShown.download}}
+      <li>
+        <span class="counter">3</span>
+        {{resume/yr-download
+          template=template}}
+      </li>
+    {{/if}}
+  </ul>
+</section>

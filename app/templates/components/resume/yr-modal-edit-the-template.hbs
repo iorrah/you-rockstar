@@ -1,0 +1,40 @@
+<div class="modal fade modal-edit-the-template" id="basicExample" tabindex="-1" role="dialog" aria-labelledby="title-modal-edit-the-template" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title w-100" id="title-modal-edit-the-template">
+          Editing mode (palette: {{palette.id}})
+        </h4>
+
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-7">
+            <img src="{{imageUrl}}" class="img-fluid" alt="{{simpleTitle}}">
+          </div>
+
+          <div class="col-sm-5">
+            <h1>Theme</h1>
+
+            <div class="themes">
+              {{#each palettes as |palette|}}
+                {{resume/yr-palette
+                  palette=palette
+                  selectPalette='selectPalette'}}
+              {{/each}}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+.canvas-container {
+  cursor: pointer;
+  width: 47%;
+  height: auto;
+  display: inline-block;
+  margin: 0 2% 1rem 0;
+  padding: 1rem;
+
+  &.selected {
+    border: .15rem solid #eee;
+  }
+
+  canvas {
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    margin: 0;
+  }
+}

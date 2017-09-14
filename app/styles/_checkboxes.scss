@@ -1,0 +1,66 @@
+// Checkbox
+$md-checkbox-checked-color: rgb(51, 122, 183);
+$md-checkbox-border-color: rgba(0, 0, 0, 0.54);
+$md-checkbox-border-width: .15rem;
+$md-checkbox-size: 1rem;
+$md-checkbox-padding: .2rem;
+$md-checkbox-top: .23rem;
+
+// Checkmark
+$md-checkmark-width: .13rem;
+$md-checkmark-color: #fff;
+$md-checkmark-size: $md-checkbox-size - (2 * $md-checkbox-padding);
+
+.md-checkbox {
+  position: relative;
+  margin: 0;
+
+  label {
+    cursor: pointer;
+    margin: 0;
+    padding: 0 0 0 .8rem;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: $md-checkbox-top;
+    }
+
+    &:before {
+      width: $md-checkbox-size;
+      height: $md-checkbox-size;
+      background-color: #fff;
+      border: $md-checkbox-border-width solid $md-checkbox-border-color;
+      border-radius: .09rem;
+      cursor: pointer;
+      transition: background-color .3s;
+    }
+  }
+
+  input[type="checkbox"] {
+    outline: 0;
+    left: 0;
+    position: absolute;
+    top: $md-checkbox-top;
+
+    &:checked {
+      + label:before {
+        background-color: $md-checkbox-checked-color;
+        border: none;
+      }
+
+      + label:after {
+        transform: rotate(-45deg);
+        top: ($md-checkbox-size / 2) - ($md-checkmark-size / 10);
+        left: $md-checkbox-padding;
+        width: $md-checkmark-size;
+        height: $md-checkmark-size / 2;
+        border: $md-checkmark-width solid $md-checkmark-color;
+        border-top-style: none;
+        border-right-style: none;
+      }
+    }
+  }
+}

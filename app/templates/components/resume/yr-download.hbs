@@ -1,0 +1,45 @@
+<section class="container edit-the-template">
+  {{#if template.id}}
+    <div class="row">
+      <div class="col-sm-12">
+        <h1>Download</h1>
+
+        <div class="jumbotron">
+          <div class="row">
+            <div class="col-sm-3">
+              <img src="{{imageUrl}}" class="img-fluid" alt="{{simpleTitle}}">
+            </div>
+
+            <div class="col-sm-9 ml-auto">
+              <h1 class="h1-responsive">
+                You've made it, good job.
+              </h1>
+
+              <p class="lead">
+                You are ready to download the {{simpleTitle}}.
+              </p>
+
+              <hr class="my-2">
+
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+              </p>
+
+              <button class="btn
+                             btn-rounded
+                             {{state.button.class_name}}
+                             btn-rz-3"
+                      role="button">
+                Download
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {{else}}
+    <h1>Please, select a template above</h1>
+  {{/if}}
+</section>

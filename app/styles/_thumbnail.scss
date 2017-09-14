@@ -1,0 +1,41 @@
+.col-thumbnail {
+  text-align: left;
+  .card {
+    .mask {
+      .i-container {
+        background: linear-gradient(40deg, #009688, #8BC34A);
+        transform: rotatey(180deg);
+        border-radius: 100%;
+        margin: 5rem auto 0;
+        display: none;
+        width: 4rem;
+        height: 4rem;
+        padding: .9rem 0 .8rem .5rem;
+      }
+
+      .i-check {
+        color: #fff;
+        text-align: center;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        transform: rotate(-50deg);
+        font-style: normal;
+        display: block;
+        line-height: normal;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        font-weight: 400;
+      }
+    }
+
+    &.selected {
+      .mask {
+        background-color: rgba(139, 195, 74, 0.24);
+        opacity: 1;
+
+        .i-container { display: block; }
+      }
+    }
+  }
+}

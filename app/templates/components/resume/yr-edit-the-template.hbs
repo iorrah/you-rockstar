@@ -1,0 +1,51 @@
+{{resume/yr-modal-edit-the-template
+  template=template
+  palettes=palettes
+  palette=palette
+  selectPalette='selectPalette'}}
+
+<section class="container edit-the-template">
+  {{#if template.id}}
+    <div class="row">
+      <div class="col-sm-6">
+        <h1>Edit</h1>
+
+        <div class="card">
+          <h3 class="card-header success-color white-text">
+            {{simpleTitle}}
+          </h3>
+
+          <div class="card-body">
+            <h4 class="card-title">
+              {{template.name}}
+            </h4>
+
+            <p class="card-text">
+              TIme to pick a theme, update some text
+              and you will be good to go.
+            </p>
+
+            <button class="btn
+                           btn-rounded
+                           {{state.button.class_name}}
+                           btn-rz-3"
+                    data-toggle="modal"
+                    data-target=".modal-edit-the-template">
+              Edit
+            </button>
+
+            <button class="btn
+                           btn-rounded
+                           btn-meteor
+                           btn-rz-3"
+                    {{action 'wontEdit' template}}>
+              Won't edit
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  {{else}}
+    <h1>Please, select a template above</h1>
+  {{/if}}
+</section>
