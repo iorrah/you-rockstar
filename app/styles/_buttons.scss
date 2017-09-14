@@ -50,6 +50,18 @@
     }
   }
 
+  &.btn-link {
+    border: 0;
+    color: inherit !important;
+    background: none;
+
+    &,
+    &:hover {
+      color: inherit !important;
+      text-decoration: none;
+    }
+  }
+
   &.btn-rz-1 {
     font-size: 1rem;
     font-weight: 400;

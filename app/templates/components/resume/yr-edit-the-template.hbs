@@ -4,20 +4,20 @@
   palette=palette
   selectPalette='selectPalette'}}
 
-<section class="container edit-the-template">
+<section class="container edit-the-template full-height">
   {{#if template.id}}
     <div class="row">
       <div class="col-sm-6">
         <h1>Edit</h1>
 
         <div class="card">
-          <h3 class="card-header success-color white-text">
-            {{simpleTitle}}
+          <h3 class="card-header">
+            {{template.name}}
           </h3>
 
           <div class="card-body">
             <h4 class="card-title">
-              {{template.name}}
+              {{simpleTitle}}
             </h4>
 
             <p class="card-text">
@@ -27,7 +27,7 @@
 
             <button class="btn
                            btn-rounded
-                           {{state.button.class_name}}
+                           btn-h20
                            btn-rz-3"
                     data-toggle="modal"
                     data-target=".modal-edit-the-template">
@@ -36,7 +36,14 @@
 
             <button class="btn
                            btn-rounded
-                           btn-meteor
+                           btn-link
+                           btn-rz-3">
+              Reset
+            </button>
+
+            <button class="btn
+                           btn-rounded
+                           btn-link
                            btn-rz-3"
                     {{action 'wontEdit' template}}>
               Won't edit

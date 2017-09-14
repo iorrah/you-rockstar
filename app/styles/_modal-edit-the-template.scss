@@ -3,7 +3,34 @@
     width: 100%;
   }
 
-  .themes {
+  h2,
+  h3 {
+    font-weight: 400;
+    border: 0;
+  }
+
+  h2 {
+    margin: 0 0 2rem;
+    font-size: .9rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #666;
+  }
+
+  h3 {
+    margin: 0 0 1rem;
+    font-size: .8rem;
+    font-weight: 400;
+    color: #bbb;
+    border-bottom: 0.1rem solid #eee;
+    padding: 0 0 1rem;
+  }
+
+  .col-preview {}
+
+  .col-themes {}
+
+  .list {
     width: 100%;
     position: relative;
   }

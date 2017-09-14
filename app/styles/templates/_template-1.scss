@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css?family=Voltaire');
+// @import url('https://fonts.googleapis.com/css?family=Arya:700|Asul|Federo|Text+Me+One|Voltaire');
+
+.template-1 {
+  padding: 0 0 4rem;
+
+  &.palette-1 {
+    background-color: #172c2f;
+
+    h1,
+    h2 {
+      color: #ee4d3b;
+    }
+
+    header h2,
+    h3,
+    p,
+    ul li {
+      color: #fff;
+    }
+  }
+
+  &.palette-2 {
+    background-color: #fff;
+
+    h1,
+    h2 {
+      color: #673AB7;
+    }
+
+    header h2,
+    h3,
+    p,
+    ul li {
+      color: #212529;
+    }
+  }
+
+  &.palette-8 {
+    background-color: #fff;
+
+    h1,
+    h2 {
+      color: #3f51b5;
+    }
+
+    header h2,
+    h3,
+    p,
+    ul li {
+      color: #212529;
+    }
+  }
+
+  &.palette-9 {
+    background-color: #fff;
+
+    h1,
+    h2 {
+      color: #e91e63;
+    }
+
+    header h2,
+    h3,
+    p,
+    ul li {
+      color: #212529;
+    }
+  }
+
+  &.palette-10 {
+    background-color: #673AB7;
+
+    h1,
+    h2,
+    h3,
+    p,
+    ul li {
+      color: #fff;
+    }
+  }
+
+  header {
+    padding: 3rem 0 0;
+
+    h1,
+    h2 {
+      margin: 0;
+      text-align: left;
+    }
+
+    h1 {
+      font-size: 4.2rem;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+    }
+  }
+
+  header { margin: 0 0 4rem; }
+
+  section {
+    margin: 0 0 2rem;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    text-align: right;
+    margin: 0;
+  }
+
+  h2 {
+    font-size: .8rem;
+    margin: 0 0 .4rem;
+  }
+
+  p,
+  h3 {
+    font-size: .9rem;
+    margin: 0;
+  }
+
+  h1,
+  h2 {
+    text-transform: uppercase;
+
+    font-family: 'Voltaire', sans-serif;
+    // font-family: 'Federo', sans-serif;
+    // font-family: 'Asul', sans-serif;
+    // font-family: 'Arya', sans-serif;
+  }
+
+  ul {
+    margin: 0 0 3rem;
+    padding: 0 0 0 1rem;
+
+    li {
+      list-style: disc
+    }
+  }
+}

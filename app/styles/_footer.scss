@@ -1,0 +1,22 @@
+.page-footer {
+  .col-link,
+  .col-email {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+
+  .col-link { text-align: left; }
+  .col-email { text-align: right; }
+
+  &.blue {
+    background-color: $orlando !important;
+  }
+
+  &.navy {
+    background-color: #0d0b21 !important;
+
+    .footer-copyright {
+      background-color: rgb(11, 9, 25) !important;
+    }
+  }
+}

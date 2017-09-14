@@ -5,4 +5,10 @@
   background: -webkit-linear-gradient($caribe, $orlando);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
+  &.white {
+    color: #e4e4e4 !important;
+    background: none !important;
+    -webkit-text-fill-color: #fff;
+  }
 }

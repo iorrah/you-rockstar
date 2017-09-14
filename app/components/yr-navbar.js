@@ -4,9 +4,6 @@ export default Ember.Component.extend({
   didInsertElement() {
     this.startAffix();
   },
-  currentPathObserver: Ember.observer('currentPath', function() {
-    this.startAffix();
-  }),
   // startAffix: function() {
   //   var top = function() {
   //     var height;
@@ -36,8 +33,8 @@ export default Ember.Component.extend({
       }
     };
 
-    Ember.$('.navbar').each(function() {
-      var ele = Ember.$(this);
+    Ember.$(function() {
+      var ele = Ember.$('.navbar');
 
       Ember.$(window).on('scroll resize', function() {
         toggleAffix(ele, Ember.$(this));

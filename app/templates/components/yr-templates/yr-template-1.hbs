@@ -1,0 +1,140 @@
+<article class="template template-1 palette-{{palette.id}}">
+  <header>
+    {{!-- <div class="flex-container">
+      <div class="col col-avatar">
+        <div class="avatar"></div>
+      </div>
+
+      <div class="col col-name">
+        <h1>{{user.header.name}}</h1>
+        <h2>{{user.header.profession}}</h2>
+      </div>
+    </div> --}}
+
+    <div class="row">
+      <div class="col-sm-3 col-avatar">
+        <div class="avatar"></div>
+      </div>
+
+      <div class="col-sm-8 col-name">
+        <h1>{{user.header.name}}</h1>
+        <h2>{{user.header.profession}}</h2>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="row">
+      <div class="col-sm-3 col-title">
+        <h1>Contact</h1>
+      </div>
+
+      <div class="col-sm-8 col-content">
+        <div class="row">
+          <div class="col-sm-6">
+            <h2>Email</h2>
+            <p>{{user.contact.email}}</p>
+          </div>
+
+          <div class="col-sm-6">
+            <h2>Address</h2>
+
+            <p>
+              {{!-- if-so... --}}
+              {{user.contact.address.first_line}}<br>
+              {{!-- if-so... --}}
+              {{user.contact.address.second_line}}<br>
+              {{!-- if-so... --}}
+              {{user.contact.address.third_line}}
+            </p>
+          </div>
+
+          <div class="col-sm-6">
+            <h2>Phone</h2>
+
+            <p>
+              {{#each user.contact.phones as |phone|}}
+                {{phone.desc}}<br>
+              {{/each}}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="row">
+      <div class="col-sm-3 col-title">
+        <h1>Experience</h1>
+      </div>
+
+      <div class="col-sm-8 col-content">
+        {{#each user.body.experiences as |experience|}}
+          <div class="experience">
+            <h2>
+              {{experience.org_name}},
+              {{experience.role}}
+            </h2>
+
+            <h3>
+              {{experience.dates.from}}
+
+              {{!-- if so... --}}
+              - {{experience.dates.to}}
+            </h3>
+
+            <ul>
+              {{#each experience.tasks as |task|}}
+                <li>{{task.desc}}</li>
+              {{/each}}
+            </ul>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="row">
+      <div class="col-sm-3 col-title">
+        <h1>Skills</h1>
+      </div>
+
+      <div class="col-sm-8 col-content">
+        <ul>
+          {{#each user.body.skills as |skill|}}
+            <li>{{skill.desc}}</li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="row">
+      <div class="col-sm-3 col-title">
+        <h1>Education</h1>
+      </div>
+
+      <div class="col-sm-8 col-content">
+        {{#each user.body.eductions as |eduction|}}
+          <div class="experience">
+            <h2>
+              {{eduction.inst_name}}
+            </h2>
+
+            <h3>
+              {{eduction.course}}
+            </h3>
+
+            <p>
+              {{eduction.dates.from}}
+              {{eduction.dates.to}}
+            </p>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  </section>
+</article>

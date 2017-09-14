@@ -1,8 +1,13 @@
 import Ember from 'ember';
 import TemplatesMixin from 'you-rockstar/mixins/data/templates';
 import PalettesMixin from 'you-rockstar/mixins/data/palettes';
+import ScrollToElemMixin from 'you-rockstar/mixins/scroll-to-elem';
 
-export default Ember.Controller.extend(TemplatesMixin, PalettesMixin, {
+export default Ember.Controller.extend(TemplatesMixin, PalettesMixin, ScrollToElemMixin, {
+  palettes: Ember.computed('palettes.[]', 'template.id', function() {
+    return this.get('palettesData')
+               .filterBy('template_id', this.get('template.id'));
+  }),
   template: Ember.computed('templates.@each.is_selected', function() {
     return this.get('templates')
                .filterBy('is_selected')

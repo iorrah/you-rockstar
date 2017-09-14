@@ -1,5 +1,6 @@
 .resume {
-  padding: 10rem 0 0;
+  padding: 5.65rem 0 0;
+  height: auto;
 
   section {
     margin: 0 0 3rem;
@@ -7,5 +8,9 @@
 
   h1 {
     margin: 0 0 2rem;
+  }
+
+  .timeline .counter {
+    cursor: pointer;
   }
 }

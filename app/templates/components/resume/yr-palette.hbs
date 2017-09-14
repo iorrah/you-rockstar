@@ -1,5 +1,7 @@
 <div class="canvas-container
             {{if palette.is_selected 'selected'}}"
      {{action 'selectPalette' palette}}>
+
+  <p>Palette #{{palette.id}}</p>
   <canvas id="palette-{{palette.id}}"></canvas>
 </div>
