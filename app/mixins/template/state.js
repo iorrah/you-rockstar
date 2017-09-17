@@ -25,7 +25,7 @@ export default Ember.Mixin.create({
       }
     };
   }),
-  simpleTitle: Ember.computed('[]', function() {
+  simpleTitle: Ember.computed('template.id', function() {
     return 'Template ' + this.get('template.id');
-  }),
+  })
 });

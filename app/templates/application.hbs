@@ -1,6 +1,9 @@
-{{#if isNavbarShow}}
+{{#if isNavbarShown}}
   {{yr-navbar}}
 {{/if}}
 
 {{outlet}}
-{{yr-footer}}
+
+{{#if isFooterShown}}
+  {{yr-footer}}
+{{/if}}

@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg navbar-dark black fixed-top">
+  <div class="container">
+    {{#link-to 'resume' class='navbar-brand'}}
+      <strong>Resume</strong>
+    {{/link-to}}
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        {{#link-to 'resume.edit' class='nav-item' tagName='li'}}
+          <a class="nav-link">Edit</a>
+        {{/link-to}}
+
+        {{#link-to 'resume.preview' class='nav-item' tagName='li'}}
+          <a class="nav-link">Preview</a>
+        {{/link-to}}
+
+        {{#link-to 'resume.download' class='nav-item' tagName='li'}}
+          <a class="nav-link">Download</a>
+        {{/link-to}}
+      </ul>
+    </div>
+  </div>
+</nav>

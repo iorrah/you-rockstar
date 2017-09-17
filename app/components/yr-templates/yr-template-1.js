@@ -4,10 +4,7 @@ import TemplateStateMixin from 'you-rockstar/mixins/template/state';
 import UserMixin from 'you-rockstar/mixins/data/user';
 
 export default Ember.Component.extend(
-  ConstantsMixin, 
-  TemplateStateMixin, 
-  UserMixin,
-  {
-    // ...
-  }
+  ConstantsMixin,
+  TemplateStateMixin,
+  UserMixin
 );

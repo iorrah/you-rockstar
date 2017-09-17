@@ -1,0 +1,49 @@
+<div class="btn-gear-container">
+  <button class="btn btn-black btn-gear menu-toggle">
+    <i class="fa fa-cog"></i>
+  </button>
+</div>
+
+<div id="sidebar-wrapper">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-4">
+        <ul class="sidebar-nav">
+          <li class="sidebar-close">
+            <a class="menu-toggle">
+              <span>&times;</span> Close
+            </a>
+          </li>
+
+          <li>
+            <a href="#"
+               class="{{if areTemplatesShown 'active'}}"
+               {{action 'activeMenu' 'templates'}}>
+              Templates
+            </a>
+          </li>
+
+          <li>
+            <a href="#"
+               class="{{if arePalettesShown 'active'}}"
+               {{action 'activeMenu' 'palettes'}}>
+              Palettes
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-sm-8">
+        {{#if areTemplatesShown}}
+          {{resume/yr-sidebar/yr-templates
+            templates=templates
+            select='selectTemplate'}}
+        {{else if arePalettesShown}}
+          {{resume/yr-sidebar/yr-palettes
+            palettes=palettes
+            select='selectPalette'}}
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</div>

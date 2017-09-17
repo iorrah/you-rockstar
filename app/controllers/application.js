@@ -1,14 +1,52 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  isNavbarShow: true,
-  observesCurrentPath: Ember.observer('currentPath', function() {
-    this.set('isNavbarShow', false);
+  isNavbarShown: Ember.computed('currentPath', function() {
+    var shown = true,
+        cpath = this.get('currentPath');
 
-    var self = this;
+    switch (cpath) {
+      case 'resume.index':
+        shown = false;
+        break;
+      case 'resume.templates':
+        shown = false;
+        break;
+      case 'resume.preview':
+        shown = false;
+        break;
+      case 'resume.edit':
+        shown = false;
+        break;
+      case 'resume.download':
+        shown = false;
+        break;
+    }
 
-    setTimeout(function() {
-      self.set('isNavbarShow', true);
-    }, 100);
+    return shown;
   }),
+  isFooterShown: Ember.computed('currentPath', function() {
+    var shown = true,
+        cpath = this.get('currentPath');
+
+    switch (cpath) {
+      case 'resume.index':
+        shown = false;
+        break;
+      case 'resume.templates':
+        shown = false;
+        break;
+      case 'resume.preview':
+        shown = false;
+        break;
+      case 'resume.edit':
+        shown = false;
+        break;
+      case 'resume.download':
+        shown = false;
+        break;
+    }
+
+    return shown;
+  })
 });

@@ -4,19 +4,21 @@
 .template-1 {
   padding: 0 0 4rem;
 
+  // Palettes
+
   &.palette-1 {
-    background-color: #172c2f;
+    background-color: #bbdefb;
 
     h1,
     h2 {
-      color: #ee4d3b;
+      color: #212529;
     }
 
     header h2,
     h3,
     p,
     ul li {
-      color: #fff;
+      color: #585858;
     }
   }
 
@@ -80,6 +82,24 @@
     }
   }
 
+  &.palette-11 {
+    background-color: #fff;
+
+    h1,
+    h2 {
+      color: #212529;
+    }
+
+    header h2,
+    h3,
+    p,
+    ul li {
+      color: #212529;
+    }
+  }
+
+  // Structure
+
   header {
     padding: 3rem 0 0;
 
@@ -87,6 +107,7 @@
     h2 {
       margin: 0;
       text-align: left;
+      line-height: normal;
     }
 
     h1 {
@@ -140,7 +161,15 @@
     padding: 0 0 0 1rem;
 
     li {
-      list-style: disc
+      list-style: none;
+      position: relative;
+
+      .bullet {
+        position: absolute;
+        top: -0.15rem;
+        left: -1rem;
+        font-size: 1rem;
+      }
     }
   }
 }

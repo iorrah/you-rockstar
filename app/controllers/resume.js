@@ -4,6 +4,10 @@ import PalettesMixin from 'you-rockstar/mixins/data/palettes';
 import ScrollToElemMixin from 'you-rockstar/mixins/scroll-to-elem';
 
 export default Ember.Controller.extend(TemplatesMixin, PalettesMixin, ScrollToElemMixin, {
+  currentPath: Ember.computed('target.currentPath', function() {
+    var path = this.get('target.currentPath') || '';
+    return path.replace('resume.', '');
+  }),
   palettes: Ember.computed('palettes.[]', 'template.id', function() {
     return this.get('palettesData')
                .filterBy('template_id', this.get('template.id'));
@@ -31,11 +35,8 @@ export default Ember.Controller.extend(TemplatesMixin, PalettesMixin, ScrollToEl
     template.set('is_edited', false);
     template.set('wont_edit', false);
   },
-  disselectPalette: function(template) {
-    template.set('is_selected', false);
-  },
   actions: {
-    select: function(template) {
+    selectTemplate: function(template) {
       var tmpts = this.get('templates');
       var size = tmpts.get('length');
 
@@ -50,18 +51,25 @@ export default Ember.Controller.extend(TemplatesMixin, PalettesMixin, ScrollToEl
       }
     },
     selectPalette: function(palette) {
+      if (palette.is_selected) {
+        return true;
+      }
+
       var plts = this.get('palettes');
       var size = plts.get('length');
 
       for (var i = size - 1; i >= 0; i--) {
         var plt = plts[i];
+        plt.set('is_selected', false);
 
-        if (plt.get('id') == palette.get('id')) {
-          plt.set('is_selected', !palette.get('is_selected'));
-        } else {
-          this.disselectPalette(plt);
-        }
+        // if (plt.get('id') == palette.get('id')) {
+        //   plt.set('is_selected', !palette.get('is_selected'));
+        // } else {
+        //   this.disselectPalette(plt);
+        // }
       }
+
+      palette.set('is_selected', true);
     }
   }
 });

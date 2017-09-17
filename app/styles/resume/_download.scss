@@ -1,0 +1,41 @@
+&.download {
+  margin: 0;
+  height: 100%;
+
+  .download-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .downloadable-template {
+    display: none;
+  }
+}
+
+@media print {
+  &.download {
+    height: auto;
+    padding: 0 !important;
+    overflow-x: hidden;
+
+    nav,
+    footer,
+    .download-container {
+      display: none;
+    }
+  }
+
+  .downloadable-template {
+    display: block !important;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+
+    .template {
+      border-radius: 0;
+    }
+  }
+}

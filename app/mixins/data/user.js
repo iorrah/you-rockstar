@@ -22,6 +22,14 @@ export default Ember.Mixin.create({
       phones: [{
         id: 1,
         desc: '(872) 871 9271'
+      },
+      {
+        id: 2,
+        desc: '(872) 871 9271'
+      },
+      {
+        id: 3,
+        desc: '(872) 871 9271'
       }],
       address: {
         first_line: '55, San Mary Lane',
@@ -36,6 +44,7 @@ export default Ember.Mixin.create({
           id: 1,
           org_name: '13 Monkeys',
           role: 'Marketing Assistent',
+          date: 'Jun 2019 - Jan 2020',
           dates: {
             from: 'Jun 2019',
             to: 'Jan 2020',
@@ -59,6 +68,7 @@ export default Ember.Mixin.create({
           id: 2,
           org_name: '13 Monkeys',
           role: 'Marketing Assistent',
+          date: 'Jun 2019 - Jan 2020',
           dates: {
             from: 'Jun 2019',
             to: 'Jan 2020',
@@ -82,19 +92,15 @@ export default Ember.Mixin.create({
       skills: Ember.A([
         Ember.Object.create({
           id: 1,
-          desc: 'reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+          desc: 'Reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
         }),
         Ember.Object.create({
           id: 2,
-          desc: 'reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+          desc: 'Reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
         }),
         Ember.Object.create({
           id: 3,
-          desc: 'reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-        }),
-        Ember.Object.create({
-          id: 4,
-          desc: 'reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+          desc: 'Reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
         })
       ]),
       eductions: Ember.A([
@@ -102,6 +108,7 @@ export default Ember.Mixin.create({
           id: 1,
           inst_name: 'San Diego university',
           course: 'Bacharelor in Marketing',
+          date: 'Class of 2018',
           dates: {
             from: 'Class of 2018',
             to: ''

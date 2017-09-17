@@ -1,24 +1,13 @@
 <article class="template template-1 palette-{{palette.id}}">
   <header>
-    {{!-- <div class="flex-container">
-      <div class="col col-avatar">
-        <div class="avatar"></div>
-      </div>
-
-      <div class="col col-name">
-        <h1>{{user.header.name}}</h1>
-        <h2>{{user.header.profession}}</h2>
-      </div>
-    </div> --}}
-
     <div class="row">
       <div class="col-sm-3 col-avatar">
         <div class="avatar"></div>
       </div>
 
       <div class="col-sm-8 col-name">
-        <h1>{{user.header.name}}</h1>
-        <h2>{{user.header.profession}}</h2>
+        {{resume/yr-editor content=user.header.name sm=sm tn='h1'}}
+        {{resume/yr-editor content=user.header.profession sm=sm tn='h2'}}
       </div>
     </div>
   </header>
@@ -33,30 +22,36 @@
         <div class="row">
           <div class="col-sm-6">
             <h2>Email</h2>
-            <p>{{user.contact.email}}</p>
+            {{resume/yr-editor content=user.contact.email sm=sm tn='p'}}
           </div>
 
           <div class="col-sm-6">
             <h2>Address</h2>
 
             <p>
-              {{!-- if-so... --}}
-              {{user.contact.address.first_line}}<br>
-              {{!-- if-so... --}}
-              {{user.contact.address.second_line}}<br>
-              {{!-- if-so... --}}
-              {{user.contact.address.third_line}}
+              {{resume/yr-editor
+                content=user.contact.address.first_line
+                sm=sm
+                tn='span'}}<br>
+
+              {{resume/yr-editor
+                content=user.contact.address.second_line
+                sm=sm
+                tn='span'}}<br>
+
+              {{resume/yr-editor
+                content=user.contact.address.third_line
+                sm=sm
+                tn='span'}}
             </p>
           </div>
 
           <div class="col-sm-6">
             <h2>Phone</h2>
 
-            <p>
-              {{#each user.contact.phones as |phone|}}
-                {{phone.desc}}<br>
-              {{/each}}
-            </p>
+            {{#each user.contact.phones as |phone|}}
+              {{resume/yr-editor content=phone.desc sm=sm tn='p'}}
+            {{/each}}
           </div>
         </div>
       </div>
@@ -73,20 +68,41 @@
         {{#each user.body.experiences as |experience|}}
           <div class="experience">
             <h2>
-              {{experience.org_name}},
-              {{experience.role}}
+              {{resume/yr-editor content=experience.org_name sm=sm tn='span'}}
+
+              {{#if experience.role}}
+                , {{resume/yr-editor content=experience.role sm=sm tn='span'}}
+              {{/if}}
             </h2>
 
-            <h3>
-              {{experience.dates.from}}
+            {{#if (and experience.dates.from experience.dates.to)}}
+              <h3>
+                {{#if experience.dates.from}}
+                  {{resume/yr-editor
+                    content=experience.dates.from
+                    sm=sm
+                    tn='span'}}
+                {{/if}}
 
-              {{!-- if so... --}}
-              - {{experience.dates.to}}
-            </h3>
+                {{#if experience.dates.to}}
+                  - {{resume/yr-editor
+                      content=experience.dates.to
+                      sm=sm
+                      tn='span'}}
+                {{/if}}
+              </h3>
+            {{/if}}
 
             <ul>
               {{#each experience.tasks as |task|}}
-                <li>{{task.desc}}</li>
+                {{#if task.desc}}
+                  {{#if task.desc}}
+                    <li>
+                      {{resume/yr-editor content=task.desc sm=sm tn='span'}}
+                      <span class="bullet">&bullet;</span>
+                    </li>
+                  {{/if}}
+                {{/if}}
               {{/each}}
             </ul>
           </div>
@@ -104,7 +120,10 @@
       <div class="col-sm-8 col-content">
         <ul>
           {{#each user.body.skills as |skill|}}
-            <li>{{skill.desc}}</li>
+            <li>
+              {{resume/yr-editor content=skill.desc wrap=true sm=sm tn='span'}}
+              <span class="bullet">&bullet;</span>
+            </li>
           {{/each}}
         </ul>
       </div>
@@ -120,18 +139,14 @@
       <div class="col-sm-8 col-content">
         {{#each user.body.eductions as |eduction|}}
           <div class="experience">
-            <h2>
-              {{eduction.inst_name}}
-            </h2>
+            {{resume/yr-editor content=eduction.inst_name sm=sm tn='h2'}}
+            {{resume/yr-editor content=eduction.course sm=sm tn='h3'}}
+            {{resume/yr-editor content=eduction.date sm=sm tn='p'}}
 
-            <h3>
-              {{eduction.course}}
-            </h3>
-
-            <p>
+            {{!-- <p>
               {{eduction.dates.from}}
               {{eduction.dates.to}}
-            </p>
+            </p> --}}
           </div>
         {{/each}}
       </div>

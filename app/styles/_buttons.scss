@@ -62,6 +62,17 @@
     }
   }
 
+  &.btn-black {
+    border: 0;
+    color: #fff !important;
+    background-color: #000;
+
+    &,
+    &:hover {
+      color: #fff !important;
+    }
+  }
+
   &.btn-rz-1 {
     font-size: 1rem;
     font-weight: 400;

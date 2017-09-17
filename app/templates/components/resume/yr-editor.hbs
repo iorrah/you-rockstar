@@ -1,0 +1,15 @@
+{{#if isShowModeShown}}
+  <span class="show-mode">
+    {{content}}
+  </span>
+{{else}}
+  {{!-- {{#if wrap}} --}}
+    <span class="auto-mode" contenteditable="true" spellcheck="false">
+      {{content}}
+    </span>
+  {{!-- {{else}}
+    <span class="auto-mode">
+      {{input contenteditable="true" type="text" value=content}}
+    </span>
+  {{/if}} --}}
+{{/if}}

@@ -1,49 +1,6 @@
-<section class="resume full-height">
-  <ul class="timeline">
-    {{!-- {{#if isStepShown.pick}} --}}
-      <li>
-        <span id="counter-1"
-              class="counter"
-              {{action 'scrollToElem' '#counter-1'}}>
-          1
-        </span>
-
-        {{yr-pick-a-template
-          templates=templates
-          template=template
-          select='select'}}
-      </li>
-    {{!-- {{/if}} --}}
-
-    {{!-- {{#if isStepShown.edit}} --}}
-      <li>
-        <span id="counter-2"
-              class="counter"
-              {{action 'scrollToElem' '#counter-2'}}>
-          2
-        </span>
-
-        {{resume/yr-edit-the-template
-          template=template
-          palettes=palettes
-          palette=palette
-          selectPalette='selectPalette'}}
-      </li>
-    {{!-- {{/if}} --}}
-
-    {{!-- {{#if isStepShown.download}} --}}
-      <li>
-        <span id="counter-3"
-              class="counter"
-              {{action 'scrollToElem' '#counter-3'}}>
-          3
-        </span>
-
-        {{resume/yr-download
-          template=template}}
-      </li>
-    {{!-- {{/if}} --}}
-  </ul>
+<section class="resume full-height {{currentPath}}">
+  {{resume/yr-navbar}}
+  {{outlet}}
 </section>
 
 <div class="clearfix"></div>

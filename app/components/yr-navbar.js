@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   didInsertElement() {
-    this.startAffix();
+    // this.startAffix();
   },
   // startAffix: function() {
   //   var top = function() {

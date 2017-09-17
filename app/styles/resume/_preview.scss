@@ -1,0 +1,19 @@
+&.preview {
+  margin: 0;
+  height: auto;
+  background-color: #333;
+
+  .template-container {
+    width: 64rem;
+    padding: 0;
+  }
+
+  .feature-container {
+    position: relative;
+    padding: 3rem 0;
+  }
+
+  .template-container {
+    margin: 0 auto;
+  }
+}

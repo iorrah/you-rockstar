@@ -10,7 +10,14 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('resume');
+  this.route('resume', function() {
+    this.route('index', { path: '/' });
+    this.route('edit');
+    this.route('create');
+    this.route('download');
+    this.route('preview');
+    this.route('templates');
+  });
 });
 
 export default Router;

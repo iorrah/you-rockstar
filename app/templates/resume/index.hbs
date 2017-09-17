@@ -1,0 +1,44 @@
+<ul class="timeline">
+  {{!-- {{#if isStepShown.pick}} --}}
+    <li>
+      <span id="counter-1"
+            class="counter"
+            {{action 'scrollToElem' '#counter-1'}}>
+        1
+      </span>
+
+      {{yr-pick-a-template
+        templates=resume.templates
+        template=resume.template
+        select='select'}}
+    </li>
+  {{!-- {{/if}} --}}
+
+  {{!-- {{#if isStepShown.edit}} --}}
+    <li>
+      <span id="counter-2"
+            class="counter"
+            {{action 'scrollToElem' '#counter-2'}}>
+        2
+      </span>
+
+      {{resume/yr-edit-the-template
+        template=resume.template
+        palettes=resume.palettes
+        palette=resume.palette
+        selectPalette='selectPalette'}}
+    </li>
+  {{!-- {{/if}} --}}
+
+  {{!-- {{#if isStepShown.download}} --}}
+    <li>
+      <span id="counter-3"
+            class="counter"
+            {{action 'scrollToElem' '#counter-3'}}>
+        3
+      </span>
+
+      {{resume/yr-download template=resume.template}}
+    </li>
+  {{!-- {{/if}} --}}
+</ul>
