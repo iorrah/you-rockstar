@@ -1,21 +1,19 @@
 <div id="wrapper">
-  {{resume/yr-sidebar
-    templates=resume.templates
-    palettes=resume.palettes
-    selectTemplate='selectTemplate'
-    selectPalette='selectPalette'}}
-
   <div id="page-content-wrapper">
     <div class="feature-container">
       <div class="container-fluid">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="template-container">
-              {{component (concat 'yr-templates/yr-template-' resume.template.id)
-                template=resume.template
-                palette=resume.palette}}
-            </div>
-          </div>
+        <div class="template-container">
+          {{resume/yr-control
+            template=resume.template
+            templates=resume.templates
+            palette=resume.palette
+            palettes=resume.palettes
+            selectTemplate='selectTemplate'
+            selectPalette='selectPalette'}}
+
+          {{component (concat 'yr-templates/yr-template-' resume.template.id)
+            template=resume.template
+            palette=resume.palette}}
         </div>
       </div>
     </div>

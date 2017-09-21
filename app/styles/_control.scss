@@ -1,0 +1,19 @@
+.control {
+  margin: 0 0 1rem;
+
+  label {
+    width: 5rem;
+    white-space: nowrap;
+    margin: 0;
+    color: #fff;
+    font-weight: 400;
+
+    &:first-child { text-align: left; }
+    &:last-child { text-align: right; }
+    &.bold { font-weight: 800; }
+  }
+
+  .js-switch + .switchery {
+    transform: rotate(180deg);
+  }
+}

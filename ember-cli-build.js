@@ -25,12 +25,14 @@ module.exports = function(defaults) {
   // CSS
   app.import('bower_components/bootstrap/dist/css/bootstrap.css');
   app.import('bower_components/MDBootstrap/css/mdb.css');
+  app.import('vendor/css/switchery.css');
 
   // JS
   app.import('bower_components/jquery/dist/jquery.js');
   app.import('bower_components/popper.js/dist/umd/popper.js');
   app.import('bower_components/bootstrap/dist/js/bootstrap.js');
   app.import('bower_components/MDBootstrap/js/mdb.js');
+  app.import('vendor/js/switchery.js');
 
   return app.toTree();
 };

@@ -2,9 +2,10 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   tagName: '',
+  areTemplatesShown: true,
+  arePalettesShown: false,
   didInsertElement: function() {
     this.startSideBar();
-    // $('.menu-toggle').first().click();
   },
   startSideBar: function() {
     $('.menu-toggle').click(function(e) {
@@ -12,11 +13,6 @@ export default Ember.Component.extend({
       $('#wrapper').toggleClass('toggled');
     });
   },
-  someProperty: Ember.computed(function() {
-    // ...
-  }),
-  areTemplatesShown: true,
-  arePalettesShown: false,
   actions: {
     activeMenu: function(menu) {
       if (menu == 'templates') {
