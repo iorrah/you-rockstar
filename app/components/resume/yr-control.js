@@ -17,6 +17,7 @@ export default Ember.Component.extend({
   }),
   didInsertElement: function() {
     this.startSwitchery();
+    this.startObservingKeys();
   },
   startSwitchery: function() {
     var elem = document.querySelector('.js-switch');
@@ -28,6 +29,20 @@ export default Ember.Component.extend({
     }
 
     var init = new Switchery(elem, options);
+  },
+  startObservingKeys: function() {
+    Mousetrap.bind('t', this.triggerState);
+    Mousetrap.bind('left', this.trigggerPrev);
+    Mousetrap.bind('right', this.trigggerNext);
+  },
+  triggerState: function() {
+    Ember.$('#state-switcher').click();
+  },
+  trigggerPrev: function() {
+    Ember.$('#state-prev').click();
+  },
+  trigggerNext: function() {
+    Ember.$('#state-next').click();
   },
   getNext: function(type) {
     var items = this.get(type.pluralize());
@@ -75,6 +90,20 @@ export default Ember.Component.extend({
 
     return prev;
   },
+  goToNext: function() {
+    if (this.get('state.template')) {
+      this.repo().template().setNext();
+    } else if (this.get('state.theming')) {
+      this.repo().theming().setNext();
+    }
+  },
+  goToPrev: function() {
+    if (this.get('state.template')) {
+      this.repo().template().setPrev();
+    } else if (this.get('state.theming')) {
+      this.repo().theming().setPrev();
+    }
+  },
   repo: function() {
     var self = this;
 
@@ -103,18 +132,10 @@ export default Ember.Component.extend({
   },
   actions: {
     next: function() {
-      if (this.get('state.template')) {
-        this.repo().template().setNext();
-      } else if (this.get('state.theming')) {
-        this.repo().theming().setNext();
-      }
+      this.goToNext();
     },
     prev: function() {
-      if (this.get('state.template')) {
-        this.repo().template().setPrev();
-      } else if (this.get('state.theming')) {
-        this.repo().theming().setPrev();
-      }
+      this.goToPrev();
     },
     selectTemplate: function(template) {
       this.sendAction('selectTemplate', template);

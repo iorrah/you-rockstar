@@ -33,6 +33,7 @@ module.exports = function(defaults) {
   app.import('bower_components/bootstrap/dist/js/bootstrap.js');
   app.import('bower_components/MDBootstrap/js/mdb.js');
   app.import('vendor/js/switchery.js');
+  app.import('vendor/js/mousetrap.js');
 
   return app.toTree();
 };
