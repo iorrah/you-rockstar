@@ -4,16 +4,13 @@
   background-color: #333;
 
   .template-container {
-    width: 64rem;
+    margin: 0 auto;
     padding: 0;
+    width: 64rem;
   }
 
   .feature-container {
     position: relative;
-    padding: 1rem 0;
-  }
-
-  .template-container {
-    margin: 0 auto;
+    padding: 0 0 3rem;
   }
 }

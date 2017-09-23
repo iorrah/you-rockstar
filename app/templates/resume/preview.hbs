@@ -1,6 +1,6 @@
 <div class="feature-container">
   <div class="template-container">
-    {{yr-templates/yr-template-1
+    {{component (concat 'yr-templates/yr-template-' resume.template.id)
       template=resume.template
       palette=resume.palette
       sm=true}}

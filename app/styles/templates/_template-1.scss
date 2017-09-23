@@ -2,23 +2,25 @@
 // @import url('https://fonts.googleapis.com/css?family=Arya:700|Asul|Federo|Text+Me+One|Voltaire');
 
 .template-1 {
-  padding: 0 0 4rem;
+  padding: 0 15px 4rem;
 
   // Palettes
 
   &.palette-1 {
-    background-color: #bbdefb;
+    background-color: #eef1f3;
+
+    header { border-color: #d6d6d6; }
 
     h1,
     h2 {
-      color: #212529;
+      color: #3c3c3c;
     }
 
     header h2,
     h3,
     p,
     ul li {
-      color: #585858;
+      color: #484848;
     }
   }
 
@@ -27,14 +29,14 @@
 
     h1,
     h2 {
-      color: #673AB7;
+      color: #636363;
     }
 
     header h2,
     h3,
     p,
     ul li {
-      color: #212529;
+      color: #4e4e4e;
     }
   }
 
@@ -54,35 +56,7 @@
     }
   }
 
-  &.palette-9 {
-    background-color: #fff;
-
-    h1,
-    h2 {
-      color: #e91e63;
-    }
-
-    header h2,
-    h3,
-    p,
-    ul li {
-      color: #212529;
-    }
-  }
-
   &.palette-10 {
-    background-color: #673AB7;
-
-    h1,
-    h2,
-    h3,
-    p,
-    ul li {
-      color: #fff;
-    }
-  }
-
-  &.palette-11 {
     background-color: #fff;
 
     h1,
@@ -101,7 +75,10 @@
   // Structure
 
   header {
-    padding: 3rem 0 0;
+    height: auto;
+    border-bottom: 1px solid #eaeaea;
+    margin: 0 0 2rem;
+    padding: 3rem 0 2rem;
 
     h1,
     h2 {
@@ -119,10 +96,9 @@
     }
   }
 
-  header { margin: 0 0 4rem; }
-
   section {
     margin: 0 0 2rem;
+    height: auto;
 
     &:last-child {
       margin: 0;
