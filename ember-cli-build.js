@@ -32,6 +32,7 @@ module.exports = function(defaults) {
   app.import('bower_components/popper.js/dist/umd/popper.js');
   app.import('bower_components/bootstrap/dist/js/bootstrap.js');
   app.import('bower_components/MDBootstrap/js/mdb.js');
+  app.import('bower_components/parallax.js/parallax.js');
   app.import('vendor/js/switchery.js');
   app.import('vendor/js/mousetrap.js');
 

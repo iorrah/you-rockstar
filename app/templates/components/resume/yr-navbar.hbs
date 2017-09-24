@@ -11,17 +11,23 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         {{#link-to 'resume.edit' class='nav-item' tagName='li'}}
-          <a class="nav-link">Edit</a>
+          <a class="nav-link waves-effect">Edit</a>
         {{/link-to}}
 
         {{#link-to 'resume.preview' class='nav-item' tagName='li'}}
-          <a class="nav-link">Preview</a>
+          <a class="nav-link waves-effect">Preview</a>
         {{/link-to}}
 
         {{#link-to 'resume.download' class='nav-item' tagName='li'}}
-          <a class="nav-link">Download</a>
+          <a class="nav-link waves-effect">Download</a>
         {{/link-to}}
       </ul>
     </div>
+
+    <ul class="navbar-nav mr-auto">
+      {{#link-to 'index' class='nav-item' tagName='li'}}
+        <a class="nav-link waves-effect">Exit</a>
+      {{/link-to}}
+    </ul>
   </div>
 </nav>

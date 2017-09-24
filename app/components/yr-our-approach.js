@@ -1,8 +1,7 @@
 import Ember from 'ember';
-import ScrollToElemMixin from 'you-rockstar/mixins/scroll-to-elem';
 import ParallaxMixin from 'you-rockstar/mixins/parallax';
 
-export default Ember.Component.extend(ScrollToElemMixin, ParallaxMixin, {
+export default Ember.Component.extend(ParallaxMixin, {
   classNames: 'full-height',
   didInsertElement: function() {
     this.startParallax();

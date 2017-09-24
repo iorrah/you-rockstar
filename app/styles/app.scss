@@ -1,5 +1,9 @@
 @import 'fonts';
+@import 'fonts-utilities';
 @import 'colours';
+@import 'flex';
+@import 'cover-view';
+@import 'utilities';
 @import 'navbar';
 @import 'footer';
 @import 'full-height';
@@ -8,6 +12,9 @@
 @import 'header';
 @import 'buttons';
 @import 'get-started';
+@import 'our-approach';
+@import 'why';
+@import 'parallax';
 @import 'resume';
 @import 'pick-a-template';
 @import 'timeline';
@@ -23,3 +30,4 @@
 @import 'templates/template-3';
 @import 'sidebar';
 @import 'control';
+@import 'resume/navbar';

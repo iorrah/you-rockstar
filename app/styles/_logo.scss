@@ -1,14 +1,21 @@
 .logo {
-  font-family: 'Ewert', cursive;
+  font-family: 'Merienda One', cursive;
+  font-weight: 400;
   font-style: inherit;
   color: inherit;
-  background: -webkit-linear-gradient($caribe, $orlando);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
 
   &.white {
-    color: #e4e4e4 !important;
+    color: #fff !important;
     background: none !important;
     -webkit-text-fill-color: #fff;
+  }
+
+  i {
+    position: relative;
+    left: -.5rem;
+    background: -webkit-linear-gradient($caribe, $orlando);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }

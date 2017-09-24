@@ -1,45 +1,26 @@
 <section id="get-started" class="get-started">
   <div class="container full-height">
     <div class="row full-height">
-      <div class="col-sm-9 full-height col-action">
+      <div class="col-sm-8 full-height col-action">
         <div class="flex-center flex-column flex-container">
           <h1 class="animated fadeIn">
             Generate a Resumé in minutes
           </h1>
 
           <p class="animated fadeIn">
-            From the Ember Community to the world.
-            High Quality CV Templates and Colour Palettes.
-            Forever Free and Open Source s2.
-            No need to worry about Sign Up.
-            Integrate wit Dropbox in case you want to continue
-            where you stopped.
-            DuckDuckGo approach: this app runs locally and we
-            never submit your data to the cloud so you do not
-            have to worry about privacy issues. We allow you to
-            download this in HTML, JSON, PDF and image format.
             Create, Customize and Download. It's that simple.
-            Fork on GitHub: https://github.com/you-rockstar/you-rockstar
-            This is responsive so you can host the HTML on your personal
-            web site. The CSS is also available for download.
-            SEO first: the entire DOM has been built using the
-            best HTML5 standards and web patterns.
-            A modern approach to building CVs on century XXI.
-            You do not need more than one page.
           </p>
 
           <div class="button-container animated fadeIn">
-            {{#link-to 'resume' class='btn btn-rounded btn-h20 btn-rz-1'}}
-              Let's do it
+            {{#link-to 'resume.edit' class='btn btn-rounded btn-primary btn-rz-1 waves-effect'}}
+              Get Started
             {{/link-to}}
           </div>
         </div>
       </div>
 
-      <div class="col-sm-3 full-height col-image">
-        <div class="flex-center flex-column">
-          <img src="{{device}}">
-        </div>
+      <div class="col-sm-4 full-height col-image">
+        <img src="{{device}}">
       </div>
     </div>
   </div>

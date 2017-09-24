@@ -1,25 +1,21 @@
-<header class="homepage-header">
-  {{!-- {{yr-stars}} --}}
+<header class="homepage-header parallax aurora">
+  <div class="parallax-window cover-view" data-parallax="scroll" data-image-src="assets/images/rocknroll/1.jpeg">
+    {{yr-stars}}
 
-  <div class="flex-center flex-column">
-    <h1 class="animated fadeIn">
-      At <span class="logo">You Rockstar</span>,<br>
-      you are the star.
-    </h1>
+    <div class="flex-center flex-column flex-contained">
+      <h1 class="mega-header animated fadeIn">
+        Because you are the real rockstar in here.
+      </h1>
 
-    <!-- <h5 class="animated fadeIn mb-3">
-      Thank you for using our product. We're glad you're with us.
-    </h5> -->
+      <h2 class="animated fadeIn">
+        We help you show your talent on the stage.
+      </h2>
 
-    <h2 class="animated fadeIn">
-      We simply help you to show your talent on the stage.
-    </h2>
-
-    <div class="animated fadeIn text-center">
-      <button class="btn btn-rounded btn-h20 btn-rz-1"
-              {{action 'scrollToElem' '#get-started'}}>
-        Get Started
-      </button>
+      <div class="animated fadeIn text-center">
+        <a {{action 'scrollToElem' '#get-started'}}>
+          <span class="arrow"></span> Scroll
+        </a>
+      </div>
     </div>
   </div>
 </header>

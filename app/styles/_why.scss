@@ -1,0 +1,22 @@
+.why {
+  border-top: 1px solid #ddd !important;
+  padding: 2rem 0 3rem;
+
+  .col-sm-4 {
+    height: 16.5rem;
+  }
+
+  .card {
+    height: 100%;
+
+    h2 {
+      font-size: 3rem;
+      margin: 0 0 1.5rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin: 0 0 .55rem;
+    }
+  }
+}
