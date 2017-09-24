@@ -1,0 +1,124 @@
+.editor {
+  width: 100%;
+  display: block;
+  position: relative;
+
+  &:hover {
+    .tools {
+      &,
+      span.times {
+        visibility: visible;
+      }
+    }
+  }
+
+  .auto-mode {
+    width: 100%;
+
+    &,
+    input,
+    textarea {
+      min-height: 1rem !important;
+      height: 100%;
+      font-size: inherit;
+      font-weight: inherit;
+      line-height: inherit;
+      text-transform: inherit;
+      color: inherit;
+      border: 0;
+      padding: 0;
+      margin: 0;
+      text-align: inherit;
+      cursor: pointer;
+      display: block;
+      box-shadow: none;
+      overflow: hidden !important;
+    }
+
+    input,
+    textarea {
+      width: 95%;
+      padding-left: .12rem;
+      padding-right: .12rem;
+      border-width: 1px;
+      border-color: transparent;
+      border-style: solid;
+      position: relative;
+      z-index: 2;
+      border-radius: .2rem;
+
+      &:hover {
+        border-bottom-color: transparent;
+      }
+
+      &:focus {
+        background-color: #fff;
+        border-color: transparent;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+      }
+    }
+  }
+
+  .tools {
+    position: absolute;
+    left: 0;
+    top: -2rem;
+    z-index: 2;
+    display: block;
+    padding: 0;
+    height: 2rem;
+    width: 4rem;
+    border: 1px solid #ccc;
+    visibility: hidden;
+
+    span {
+      cursor: pointer;
+      margin: 0;
+      width: 50%;
+      border-right: 1px solid #ccc;
+      padding: .4rem 0;
+      text-align: center;
+      background-color: #eee;
+      height: 100%;
+      display: block;
+      float: left;
+
+      &:hover {
+        background-color: #ddd;
+      }
+
+      &:last-child {
+        margin: 0;
+        border-right: 0;
+      }
+
+      i {
+        font-size: 1.2rem;
+        display: block;
+
+        &.times {
+          font-size: 2rem;
+          line-height: normal;
+          position: relative;
+          top: -.65rem;
+          font-weight: 400 !important;
+          font-family: Roboto;
+          font-style: normal;
+        }
+      }
+    }
+  }
+}
+
+.template .overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  transition: background-color .9s ease-in-out;
+
+  &.active { background-color: rgba(0, 0, 0, 0.58); }
+}

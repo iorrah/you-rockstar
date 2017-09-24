@@ -42,12 +42,13 @@ export default Ember.Mixin.create({
       experiences: Ember.A([
         Ember.Object.create({
           id: 1,
-          org_name: '13 Monkeys',
-          role: 'Marketing Assistent',
+          title: '13 Monkeys, Marketing Assistent',
+          org_name: '',
+          role: '',
           date: 'Jun 2019 - Jan 2020',
           dates: {
-            from: 'Jun 2019',
-            to: 'Jan 2020',
+            from: '',
+            to: '',
           },
           tasks: [
             {
@@ -66,12 +67,13 @@ export default Ember.Mixin.create({
         }),
         Ember.Object.create({
           id: 2,
-          org_name: '13 Monkeys',
-          role: 'Marketing Assistent',
+          title: '13 Monkeys, Marketing Assistent',
+          org_name: '',
+          role: '',
           date: 'Jun 2019 - Jan 2020',
           dates: {
-            from: 'Jun 2019',
-            to: 'Jan 2020',
+            from: '',
+            to: '',
           },
           tasks: [
             {
@@ -106,13 +108,13 @@ export default Ember.Mixin.create({
       eductions: Ember.A([
         Ember.Object.create({
           id: 1,
-          inst_name: 'San Diego university',
-          course: 'Bacharelor in Marketing',
-          date: 'Class of 2018',
-          dates: {
-            from: 'Class of 2018',
-            to: ''
-          }
+          title: 'Bacharelor in Marketing, San Diego university',
+          date: '2014 - 2017'
+        }),
+        Ember.Object.create({
+          id: 1,
+          title: 'Bacharelor in Marketing, San Diego university',
+          date: '2014 - 2017'
         })
       ])
     })

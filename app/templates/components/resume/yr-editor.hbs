@@ -3,13 +3,17 @@
     {{content}}
   </span>
 {{else}}
-  {{!-- {{#if wrap}} --}}
-    <span class="auto-mode" contenteditable="true" spellcheck="false">
-      {{content}}
+  <span class="auto-mode">
+    {{input type='text' value=content}}
+  </span>
+
+  <span class="tools">
+    <span {{action 'edit'}}>
+      <i class="fa fa-pencil" aria-hidden="true"></i>
     </span>
-  {{!-- {{else}}
-    <span class="auto-mode">
-      {{input contenteditable="true" type="text" value=content}}
+
+    <span {{action 'remove'}}>
+      <i class="times">&times;</i>
     </span>
-  {{/if}} --}}
+  </span>
 {{/if}}

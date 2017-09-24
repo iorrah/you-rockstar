@@ -1,25 +1,33 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  classNames: ['editor'],
   tagName: Ember.computed(function() {
     return this.get('tn');
   }),
-  classNames: ['editor'],
   isShowModeShown: Ember.computed('sm', function() {
     return this.get('sm');
   }),
-  // observesContent: Ember.observer('content', function() {
-  //   if (this.get('adapt')) {
-  //     this.reviseInputWidth();
-  //   }
-  // }),
-  reviseInputWidth: function() {
-    var thisElem = Ember.$('#' + this.elementId);
-    var width = thisElem.find('.measure').css('width').replace('px', '');
-    console.log('.mesure is ' + width + ' long');
-    width = (width * 1);
-    width = (width) + 'px';
-    console.log('input will be ' + width + ' long');
-    thisElem.find('input').css('width', width);
+  didInsertElement: function() {
+    this.startObservingInput();
+  },
+  startObservingInput: function() {
+    var e = this.$('input')
+
+    e.on('focus', function() {
+      $('.template .overlay').addClass('active');
+    });
+
+    e.on('blur', function() {
+      $('.template .overlay').removeClass('active');
+    });
+  },
+  actions: {
+    edit: function() {
+      this.$('.auto-mode input').focus();
+    },
+    remove: function() {
+      this.set('content', '');
+    }
   }
 });
