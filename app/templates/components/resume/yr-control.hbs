@@ -1,6 +1,6 @@
 <div class="control">
   <div class="d-flex justify-content-between">
-    <div class="align-self-center">
+    <div class="align-self-center switchery-mode">
       <label for="state-switcher" class="{{if state.template 'active'}}">
         Template
       </label>
@@ -13,17 +13,17 @@
     </div>
 
     <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-      <div class="btn-group mr-2" role="group" aria-label="First group">
+      <div class="btn-group" role="group" aria-label="First group">
         <button type="button"
                 id="state-prev"
-                class="btn btn-{{if state.template 'success' 'info'}}"
+                class="btn btn-{{if state.template 'success' 'info'}} waves-effect"
                 {{action 'prev'}}>
           <i class="fa fa-angle-left"></i>
         </button>
 
         <button type="button"
                 id="state-next"
-                class="btn btn-{{if state.template 'success' 'info'}}"
+                class="btn btn-{{if state.template 'success' 'info'}} waves-effect"
                 {{action 'next'}}>
           <i class="fa fa-angle-right"></i>
         </button>

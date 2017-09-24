@@ -2,20 +2,26 @@
   padding: .9rem 0 0;
   margin: 0 0 1rem;
 
-  label {
-    width: 5rem;
-    white-space: nowrap;
-    margin: 0;
-    color: #fff;
-    font-weight: 400;
-    cursor: pointer;
+  .switchery-mode {
+    label {
+      width: 5rem;
+      white-space: nowrap;
+      margin: 0;
+      color: #fff;
+      font-weight: 400;
+      cursor: pointer;
 
-    &:first-child { text-align: left; }
-    &:last-child { text-align: right; }
+      &:first-child { text-align: left; }
+      &:last-child { text-align: right; }
 
-    &.active {
-      font-weight: 800;
+      &.active {
+        font-weight: 800;
+      }
     }
+  }
+
+  .radius-mode {
+    label.active { font-weight: 900; }
   }
 
   .js-switch + .switchery {

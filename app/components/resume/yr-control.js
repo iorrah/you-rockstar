@@ -22,13 +22,14 @@ export default Ember.Component.extend({
   startSwitchery: function() {
     var elem = document.querySelector('.js-switch');
 
+    if (elem) {
+      var options = {
+        color: '#00c851',
+        secondaryColor: '#1fc1c8'
+      }
 
-    var options = {
-      color: '#00c851',
-      secondaryColor: '#1fc1c8'
+      var init = new Switchery(elem, options);
     }
-
-    var init = new Switchery(elem, options);
   },
   startObservingKeys: function() {
     Mousetrap.bind('t', this.triggerState);
@@ -36,7 +37,18 @@ export default Ember.Component.extend({
     Mousetrap.bind('right', this.trigggerNext);
   },
   triggerState: function() {
-    Ember.$('#state-switcher').click();
+    Ember.$('.switchery-mode label').first().click();
+  },
+  triggerBtnState: function() {
+    Ember.$('.control-state').not(':checked').attr('checked', true);
+    var $radios = Ember.$('.control-state');
+
+    Ember.$('.control-state').click(function() {
+      var $checked = $radios.filter(':checked');
+      var $next = $radios.eq($radios.index($checked) + 1);
+      if (!$next.length) $next = $radios.first();
+      $next.prop('checked', true);
+    });
   },
   trigggerPrev: function() {
     Ember.$('#state-prev').click();
@@ -142,6 +154,12 @@ export default Ember.Component.extend({
     },
     selectPalette: function(palette) {
       this.sendAction('selectPalette', palette);
+    },
+    setTemplateState: function() {
+      this.set('state.is_checked', true);
+    },
+    setThemingState: function() {
+      this.set('state.is_checked', false);
     }
   }
 });

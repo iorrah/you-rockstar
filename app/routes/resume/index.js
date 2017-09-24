@@ -1,5 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  titleToken: '_Resumé'
+  beforeModel: function() {
+    this.transitionTo('resume.edit');
+  }
 });
