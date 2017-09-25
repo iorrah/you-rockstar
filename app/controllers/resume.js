@@ -61,12 +61,6 @@ export default Ember.Controller.extend(TemplatesMixin, PalettesMixin, ScrollToEl
       for (var i = size - 1; i >= 0; i--) {
         var plt = plts[i];
         plt.set('is_selected', false);
-
-        // if (plt.get('id') == palette.get('id')) {
-        //   plt.set('is_selected', !palette.get('is_selected'));
-        // } else {
-        //   this.disselectPalette(plt);
-        // }
       }
 
       palette.set('is_selected', true);

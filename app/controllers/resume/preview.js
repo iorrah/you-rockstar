@@ -7,10 +7,7 @@ export default Ember.Controller.extend({
       const JUMP = 0.09;
       var curr = null, goTo = null;
       var e = Ember.$('.template-container');
-
       curr = e[0].getBoundingClientRect().width / e[0].offsetWidth;
-
-      // debugger
 
       switch (direction) {
         case 'in':
