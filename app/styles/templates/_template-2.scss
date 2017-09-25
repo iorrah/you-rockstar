@@ -168,6 +168,20 @@
     font-weight: 100;
   }
 
+  li {
+    list-style: none;
+    position: relative;
+
+    &:last-child { margin: 0; }
+
+    .bullet {
+      position: absolute;
+      top: 0;
+      left: -1rem;
+      font-size: .7rem;
+    }
+  }
+
   .col-left {
     border-top-left-radius: .15rem;
     border-bottom-left-radius: .15rem;

@@ -4,6 +4,8 @@
   position: relative;
 
   &:hover {
+    outline: 1px dotted rgba(255, 255, 255, 0.5);
+
     .tools {
       &,
       span.times {
@@ -14,6 +16,10 @@
 
   .auto-mode {
     width: 100%;
+
+    &:hover {
+      outline: 1px dotted rgba(0, 0, 0, 0.5);
+    }
 
     &,
     input,
@@ -44,7 +50,7 @@
       border-color: transparent;
       border-style: solid;
       position: relative;
-      z-index: 2;
+      z-index: 1;
       border-radius: .2rem;
 
       &:hover {
@@ -53,9 +59,9 @@
 
       &:focus {
         background-color: #fff;
+        color: $cinder;
         border-color: transparent;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
+        padding: 1rem 1.2rem;
       }
     }
   }
@@ -96,6 +102,7 @@
       i {
         font-size: 1.2rem;
         display: block;
+        color: $cinder;
 
         &.times {
           font-size: 2rem;

@@ -1,1 +1,9 @@
 .c-pointer { cursor: pointer; }
+
+.badge {
+  &.white,
+  &.badge-white {
+    background-color: #eee;
+    color: inherit;
+  }
+}

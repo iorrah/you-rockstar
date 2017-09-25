@@ -2,7 +2,7 @@
   <span class="show-mode">
     {{content}}
   </span>
-{{else}}
+{{else if (string content)}}
   <span class="auto-mode">
     {{input type='text' value=content}}
   </span>
@@ -14,6 +14,20 @@
 
     <span {{action 'remove'}}>
       <i class="times">&times;</i>
+    </span>
+  </span>
+{{else}}
+  <span class="auto-mode">
+    {{input type='text' value=content}}
+  </span>
+
+  <span class="tools">
+    <span {{action 'edit'}}>
+      <i class="fa fa-pencil" aria-hidden="true"></i>
+    </span>
+
+    <span {{action 'add'}}>
+      <i class="times">+</i>
     </span>
   </span>
 {{/if}}

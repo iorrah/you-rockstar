@@ -8,7 +8,7 @@ export default Ember.Mixin.create({
       source: 'https://www.canva.com/templates/resumes/MACBTvM3cuo-dark-gradient-simple-resume/',
       author: 'Reychelle Ann Mendoza',
       pct_picked: 13,
-      is_selected: true,
+      is_selected: false,
       is_edited: false,
       wont_edit: false
     }),
@@ -18,7 +18,7 @@ export default Ember.Mixin.create({
       source: 'https://www.canva.com/templates/resumes/MACUmC5RqHM-gray-and-purple-simple-research-resume/',
       author: 'Reychelle Ann Mendoza',
       pct_picked: 16,
-      is_selected: false,
+      is_selected: true,
       is_edited: false,
       wont_edit: false
     })

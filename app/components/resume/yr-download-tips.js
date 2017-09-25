@@ -23,6 +23,7 @@ export default Ember.Component.extend({
       template: template,
       placement: 'right',
       title: 'Download Tip',
+      trigger: 'hover',
       content: content,
       html: true
     }

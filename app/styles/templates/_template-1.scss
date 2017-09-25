@@ -76,8 +76,8 @@
   header {
     height: auto;
     border-bottom: 1px solid #eaeaea;
-    margin: 0 0 5rem;
-    padding: 5rem 0;
+    margin: 0 0 3.3rem;
+    padding: 3rem 0 2.4rem;
 
     h1,
     h2 {
@@ -87,7 +87,7 @@
 
     h1 {
       font-size: 4.2rem;
-      margin: 0 0 1rem;
+      margin: 0 0 .5rem;
     }
 
     h2 {
@@ -99,7 +99,7 @@
   }
 
   section {
-    margin: 0 0 4rem;
+    margin: 0 0 2.5rem;
     height: auto;
 
     &:last-child { margin: 0; }

@@ -1,23 +1,39 @@
 <article class="template template-2 palette-{{palette.id}}">
+  <div class="overlay"></div>
+
   <div class="row">
     <div class="col-sm-5 col-left">
       <div class="content">
         <header>
-          <h1>
-            Kimberly Rodriguez
-          </h1>
-
-          <h2>
-            Software Developer
-          </h2>
+          {{resume/yr-editor content=user.header.name sm=sm tn='h1'}}
+          {{resume/yr-editor content=user.header.profession sm=sm tn='h2'}}
         </header>
 
         <section class="contact">
           <h1>Contact</h1>
 
-          <p>+323 234234 234234</p>
-          <p>kimberly@main.com</p>
-          <p>@krodriguez</p>
+          <p>
+            {{resume/yr-editor
+              content=user.contact.address.first_line
+              sm=sm
+              tn='span'}}
+
+            {{resume/yr-editor
+              content=user.contact.address.second_line
+              sm=sm
+              tn='span'}}
+
+            {{resume/yr-editor
+              content=user.contact.address.third_line
+              sm=sm
+              tn='span'}}
+          </p>
+
+          <p>
+            {{#each user.contact.phones as |phone|}}
+              {{resume/yr-editor content=phone.desc sm=sm tn='span'}}
+            {{/each}}
+          </p>
         </section>
       </div>
     </div>
@@ -26,160 +42,53 @@
       <section>
         <h1>Profile</h1>
 
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor.
-        </p>
+        {{resume/yr-editor
+          content=user.body.profile
+          sm=sm
+          tn='h2'}}
       </section>
 
       <section>
         <h1>Experience</h1>
 
-        <div class="section-item">
-          <h2>
-            Instructor
-          </h2>
+        {{#each user.body.experiences as |experience|}}
+          <div class="section-item">
+            {{resume/yr-editor content=experience.title sm=sm tn='h2'}}
+            {{resume/yr-editor content=experience.date sm=sm tn='h3'}}
 
-          <h3>
-            University Lorem Lorem Lorem
-          </h3>
-
-          <ul>
-            <li>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit
-            </li>
-
-            <li>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit
-            </li>
-
-            <li>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit
-            </li>
-          </ul>
-        </div>
-
-        <div class="section-item">
-          <h2>
-            Instructor
-          </h2>
-
-          <h3>
-            University Lorem Lorem Lorem
-          </h3>
-
-          <ul>
-            <li>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit
-            </li>
-
-            <li>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit
-            </li>
-
-            <li>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit
-            </li>
-          </ul>
-        </div>
-
-        <div class="section-item">
-          <h2>
-            Teacher Assistent
-          </h2>
-
-          <h3>
-            University Lorem Lorem Lorem
-          </h3>
-
-          <ul>
-            <li>
-              Consectetur adipisicing elit lorem ipsum dolor sit amet
-            </li>
-
-            <li>
-              Consectetur adipisicing elit lorem ipsum dolor sit amet
-            </li>
-
-            <li>
-              Consectetur adipisicing elit lorem ipsum dolor sit amet
-            </li>
-          </ul>
-        </div>
+            <ul>
+              {{#each experience.tasks as |task|}}
+                <li>
+                  {{resume/yr-editor content=task.desc sm=sm tn='span'}}
+                  <span class="bullet">&bullet;</span>
+                </li>
+              {{/each}}
+            </ul>
+          </div>
+        {{/each}}
       </section>
 
       <section>
         <h1>Education</h1>
 
-        <div class="section-item">
-          <h2>
-            BA in Psicology
-          </h2>
-
-          <h3>
-            University Lorem Lorem Lorem
-          </h3>
-
-          <ul>
-            <li>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit
-            </li>
-
-            <li>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit
-            </li>
-
-            <li>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit
-            </li>
-          </ul>
-        </div>
-
-        <div class="section-item">
-          <h2>
-            BA in Gastronomy
-          </h2>
-
-          <h3>
-            University Lorem Lorem Lorem
-          </h3>
-
-          <ul>
-            <li>
-              Consectetur adipisicing elit lorem ipsum dolor sit amet
-            </li>
-
-            <li>
-              Consectetur adipisicing elit lorem ipsum dolor sit amet
-            </li>
-
-            <li>
-              Consectetur adipisicing elit lorem ipsum dolor sit amet
-            </li>
-          </ul>
-        </div>
+        {{#each user.body.eductions as |eduction|}}
+          <div class="section-item">
+            {{resume/yr-editor content=eduction.title sm=sm tn='h2'}}
+            {{resume/yr-editor content=eduction.date sm=sm tn='h3'}}
+          </div>
+        {{/each}}
       </section>
 
       <section>
         <h1>Skills</h1>
 
         <ul>
-          <li>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit
-          </li>
-
-          <li>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit
-          </li>
-
-          <li>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit
-          </li>
+          {{#each user.body.skills as |skill|}}
+            <li>
+              {{resume/yr-editor content=skill.desc wrap=true sm=sm tn='span'}}
+              <span class="bullet">&bullet;</span>
+            </li>
+          {{/each}}
         </ul>
       </section>
 
@@ -187,17 +96,16 @@
         <h1>References</h1>
 
         <ul>
-          <li>
-            John Muller &bull; +44 024 340 9448
-          </li>
+          {{#each user.body.references as |reference|}}
+            <li>
+              <p>
+                {{resume/yr-editor content=reference.name wrap=true sm=sm tn='span'}}
+                {{resume/yr-editor content=reference.contact wrap=true sm=sm tn='span'}}
+              </p>
 
-          <li>
-            John Muller &bull; +44 024 340 9448
-          </li>
-
-          <li>
-            John Muller &bull; +44 024 340 9448
-          </li>
+              <span class="bullet">&bullet;</span>
+            </li>
+          {{/each}}
         </ul>
       </section>
     </div>

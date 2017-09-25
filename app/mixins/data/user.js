@@ -25,16 +25,16 @@ export default Ember.Mixin.create({
       },
       {
         id: 2,
-        desc: '(872) 871 9271'
+        desc: null
       },
       {
         id: 3,
-        desc: '(872) 871 9271'
+        desc: null
       }],
       address: {
         first_line: '55, San Mary Lane',
-        second_line: '44, San Mary Lane',
-        third_line: '33, San Mary Lane'
+        second_line: 'Resumeland',
+        third_line: null
       },
     }),
     body: Ember.Object.create({
@@ -116,7 +116,19 @@ export default Ember.Mixin.create({
           title: 'Bacharelor in Marketing, San Diego university',
           date: '2014 - 2017'
         })
-      ])
+      ]),
+      references: Ember.A([
+        Ember.Object.create({
+          id: 1,
+          name: 'Alfred Suffex',
+          contact: '(44) 1312 947 444'
+        }),
+        Ember.Object.create({
+          id: 2,
+          name: 'Anne Carnegie',
+          contact: '(44) 1312 947 444'
+        })
+      ]),
     })
   })
 });
