@@ -5,7 +5,6 @@ import TemplateStateMixin from 'you-rockstar/mixins/template/state';
 export default Ember.Component.extend(ConstantsMixin, TemplateStateMixin, {
   didInsertElement: function() {
     this.startObservingModal();
-    // this.showModal();
   },
   palettes_light_bg: Ember.computed('palettes.[]', function() {
     return this.get('palettes').filterBy('is_light_bg', true);

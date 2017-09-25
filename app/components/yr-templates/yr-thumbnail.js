@@ -5,8 +5,8 @@ import TemplateStateMixin from 'you-rockstar/mixins/template/state';
 export default Ember.Component.extend(ConstantsMixin, TemplateStateMixin, {
   tagName: '',
   actions: {
-    select: function(template) {
-      this.sendAction('select', template);
+    selectTemplate: function(template) {
+      this.sendAction('selectTemplate', template);
     }
   }
 });

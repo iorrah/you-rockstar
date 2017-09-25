@@ -11,10 +11,12 @@
             selectTemplate='selectTemplate'
             selectPalette='selectPalette'}}
 
-          {{component (concat 'yr-templates/yr-template-' resume.template.id)
+          <div class="z-depth-5">
+            {{component (concat 'yr-templates/yr-template-' resume.template.id)
             template=resume.template
             palette=resume.palette
             sm=false}}
+          </div>
         </div>
       </div>
     </div>

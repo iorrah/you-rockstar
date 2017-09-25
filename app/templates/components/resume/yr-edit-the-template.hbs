@@ -25,14 +25,13 @@
               and you will be good to go.
             </p>
 
-            <button class="btn
-                           btn-rounded
-                           btn-h20
-                           btn-rz-3"
-                    data-toggle="modal"
-                    data-target=".modal-edit-the-template">
+            {{#link-to 'resume.edit'
+                       class='btn
+                              btn-rounded
+                              btn-antares
+                              btn-rz-3'}}
               Edit
-            </button>
+            {{/link-to}}
 
             {{#link-to 'resume.preview'
                        class='btn

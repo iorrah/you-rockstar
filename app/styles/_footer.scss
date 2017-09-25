@@ -7,7 +7,11 @@ footer.page-footer {
     padding-bottom: 2rem;
   }
 
-  .col-link { text-align: left; }
+  .col-link {
+    text-align: left;
+    font-size: 1.3rem;
+  }
+
   .col-email { text-align: right; }
 
   &.blue {

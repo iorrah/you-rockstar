@@ -6,8 +6,8 @@ export default Ember.Controller.extend({
     scrollToElem: function(selector) {
       this.get('resume').send('scrollToElem', selector);
     },
-    select: function(template) {
-      this.get('resume').send('select', template);
+    selectTemplate: function(template) {
+      this.get('resume').send('selectTemplate', template);
     },
     selectPalette: function(palette) {
       this.get('resume').send('selectPalette', palette);

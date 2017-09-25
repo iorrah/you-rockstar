@@ -3,7 +3,13 @@
 .badge {
   &.white,
   &.badge-white {
-    background-color: #eee;
+    background-color: #fff;
     color: inherit;
+    font-weight: 400;
+    font-size: .8rem;
+    box-shadow: none;
+    border: .12rem solid $cinder;
+    border-radius: 1rem;
+    padding: .15rem .5rem;
   }
 }

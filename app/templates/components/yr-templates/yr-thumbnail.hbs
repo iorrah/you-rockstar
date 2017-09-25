@@ -1,33 +1,15 @@
 <div class="col-sm-4 col-thumbnail">
   <div class="card {{state.card_class_name}}">
     <div class="view overlay hm-white-slight">
-        <img src="{{imageUrl}}" class="img-fluid" alt="{{simpleTitle}}">
+      <img src="{{imageUrl}}" class="img-fluid" alt="{{simpleTitle}}">
 
-        <a {{action 'select' template}}>
-          <div class="mask">
-            <i class="i-container">
-              <i class="i-check">L</i>
-            </i>
-          </div>
-        </a>
+      <a {{action 'selectTemplate' template}}>
+        <div class="mask">
+          <i class="i-container">
+            <i class="i-check">L</i>
+          </i>
+        </div>
+      </a>
     </div>
-
-    {{!-- <div class="card-body">
-        <h4 class="card-title">
-          {{simpleTitle}}
-        </h4>
-
-        <p class="card-text">
-          {{template.name}}
-        </p>
-
-        <button class="btn
-                       btn-rounded
-                       {{state.button.class_name}}
-                       btn-rz-3"
-                {{action 'select' template}}>
-          {{state.button.text}}
-        </button>
-    </div> --}}
   </div>
 </div>

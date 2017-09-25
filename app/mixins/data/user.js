@@ -1,8 +1,5 @@
 import Ember from 'ember';
 
-// Implement Ember Mirage:
-// http://www.ember-cli-mirage.com/docs/v0.3.x/installation/
-
 export default Ember.Mixin.create({
   user: Ember.Object.create({
     id: 1,
@@ -12,16 +9,14 @@ export default Ember.Mixin.create({
         { id: 2, desc: '' },
         { id: 3, desc: '' }
       ]),
-      first_name: 'Philip',
-      last_name: 'Connor',
-      name: 'Philip Connor',
-      profession: 'Marketing Assistant',
+      name: 'John Doe',
+      profession: 'Profession Title',
     }),
     contact: Ember.Object.create({
-      email: 'philipconnor@mail.com',
+      email: 'eaddress@main.com',
       phones: [{
         id: 1,
-        desc: '(872) 871 9271'
+        desc: '+123 (45) 678 9123'
       },
       {
         id: 2,
@@ -32,9 +27,9 @@ export default Ember.Mixin.create({
         desc: null
       }],
       address: {
-        first_line: '55, San Mary Lane',
-        second_line: 'Resumeland',
-        third_line: null
+        first_line: '12, Tempor Incididunt',
+        second_line: 'Nostrud exercitation',
+        third_line: 'ENO'
       },
     }),
     body: Ember.Object.create({
@@ -42,10 +37,10 @@ export default Ember.Mixin.create({
       experiences: Ember.A([
         Ember.Object.create({
           id: 1,
-          title: '13 Monkeys, Marketing Assistent',
+          title: 'Company Name, Marketing Assistent',
           org_name: '',
           role: '',
-          date: 'Jun 2019 - Jan 2020',
+          date: 'Jun 2019 - Jan 2021',
           dates: {
             from: '',
             to: '',
@@ -53,24 +48,24 @@ export default Ember.Mixin.create({
           tasks: [
             {
               id: 1,
-              desc: 'Maintained and organized numerous office files',
+              desc: 'Excepteur sint occaecat cillum dolore eu fugiat nulla pariatur',
             },
             {
               id: 2,
-              desc: 'Organized and maintained numerous office files',
+              desc: 'Excepteur sint occaecat cillum dolore eu fugiat nulla pariatur',
             },
             {
               id: 3,
-              desc: 'Numerous office files have been maintained and organized',
+              desc: 'Excepteur sint occaecat cillum dolore eu fugiat nulla pariatur',
             }
           ]
         }),
         Ember.Object.create({
           id: 2,
-          title: '13 Monkeys, Marketing Assistent',
+          title: 'Company Name, Marketing Assistent',
           org_name: '',
           role: '',
-          date: 'Jun 2019 - Jan 2020',
+          date: 'Jun 2021 - Jan 2025',
           dates: {
             from: '',
             to: '',
@@ -78,15 +73,15 @@ export default Ember.Mixin.create({
           tasks: [
             {
               id: 4,
-              desc: 'Maintained and organized numerous office files',
+              desc: 'Duis aute irure dolor in reprehenderit in voluptate velit esse',
             },
             {
               id: 5,
-              desc: 'Organized and maintained numerous office files',
+              desc: 'Duis aute irure dolor in reprehenderit in voluptate velit esse',
             },
             {
               id: 6,
-              desc: 'Numerous office files have been maintained and organized',
+              desc: 'Duis aute irure dolor in reprehenderit in voluptate velit esse',
             }
           ]
         })
@@ -108,25 +103,25 @@ export default Ember.Mixin.create({
       eductions: Ember.A([
         Ember.Object.create({
           id: 1,
-          title: 'Bacharelor in Marketing, San Diego university',
+          title: 'Bacharelor in Marketing, University Name',
           date: '2014 - 2017'
         }),
         Ember.Object.create({
           id: 1,
-          title: 'Bacharelor in Marketing, San Diego university',
+          title: 'Bacharelor in Marketing, University Name',
           date: '2014 - 2017'
         })
       ]),
       references: Ember.A([
         Ember.Object.create({
           id: 1,
-          name: 'Alfred Suffex',
-          contact: '(44) 1312 947 444'
+          name: 'Paul Miller',
+          contact: '+123 (45) 678 9123'
         }),
         Ember.Object.create({
           id: 2,
-          name: 'Anne Carnegie',
-          contact: '(44) 1312 947 444'
+          name: 'Anne Sum',
+          contact: '+123 (45) 678 9123'
         })
       ]),
     })

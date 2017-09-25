@@ -84,6 +84,17 @@
     }
   }
 
+  &.btn-outline-black {
+    border: .12rem solid $cinder;
+    color: $cinder !important;
+    background-color: transparent;
+
+    &,
+    &:hover {
+      color: $cinder !important;
+    }
+  }
+
   &.btn-rz-1 {
     font-size: 1rem;
     font-weight: 400;
@@ -121,17 +132,23 @@
     font-size: 2rem;
   }
 
-    &.btn-thrown-right {
-      position: absolute;
-      right: 0;
-    }
+  &.btn-rz-6 {
+    font-size: .8rem;
+    font-weight: 400;
+    padding: 1rem 2.5rem;
+  }
 
-    &.btn-thrown-1 {
-      position: absolute;
-      top: 2rem;
-      left: 2rem;
-      z-index: 1;
-    }
+  &.btn-thrown-right {
+    position: absolute;
+    right: 0;
+  }
+
+  &.btn-thrown-1 {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    z-index: 1;
+  }
 
   &.btn-flat-mode {
     border: 0;

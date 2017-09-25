@@ -3,26 +3,32 @@
     <div class="col-md-2"></div>
 
     <div class="col-md-8">
-      <div class="jumbotron animated fadeIn">
-        <h1 class="h1-responsive">You have made it.</h1>
+      <div class="jumbotron animated fadeIn z-depth-4">
+        <h1 class="h1-responsive">
+          You've made it
+        </h1>
 
         <p class="lead">
-          Thank you for using our product. We're glad you're with us.
+          Thank you for using our product.
+          We're glad you're with us.
         </p>
 
         <hr class="my-2">
 
-        <p>
-          When you click on the Download button below, a page containing your Resumé will appear and prompt you to a final view before downloading it.
-
+        <p class="mb-4">
+          When you click on the Download button
+          below, a page containing your Resumé
+          is going to prompt you to download it.
           {{resume/yr-download-tips}}
         </p>
 
-        <button class="btn btn-h20 btn-rounded"
-                role="button"
-                {{action 'genPDF'}}>
-          Download PDF
-        </button>
+        <div class="text-left">
+          <button class="btn btn-black btn-rounded btn-rz-6"
+                  role="button"
+                  {{action 'genPDF'}}>
+            Download PDF
+          </button>
+        </div>
       </div>
     </div>
   </div>
