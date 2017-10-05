@@ -5,7 +5,7 @@
     "-Promise",
     "$",
     "Mousetrap",
-    "Switchery",
+    "Switchery"
   ],
   "browser": true,
   "boss": true,
@@ -30,10 +30,6 @@
   "strict": false,
   "white": false,
   "eqnull": true,
-  "esnext": true,
   "unused": true,
-  "esversion": 6,
-  "options": {
-    "esversion": 6,
-  },
+  "esversion": 6
 }
