@@ -43,7 +43,7 @@ export default Ember.Controller.extend(TemplatesMixin, PalettesMixin, ScrollToEl
       for (var i = size - 1; i >= 0; i--) {
         var tmpt = tmpts[i];
 
-        if (tmpt.get('id') == template.get('id')) {
+        if (tmpt.get('id') === template.get('id')) {
           tmpt.set('is_selected', !template.get('is_selected'));
         } else {
           this.disselectTemplate(tmpt);

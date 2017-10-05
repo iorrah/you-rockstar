@@ -26,7 +26,7 @@ export default Ember.Component.extend({
       trigger: 'hover',
       content: content,
       html: true
-    }
+    };
   },
   dismissPoppover: function() {
     Ember.$('[data-toggle="popover"]').popover('hide');

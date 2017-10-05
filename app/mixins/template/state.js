@@ -2,7 +2,6 @@ import Ember from 'ember';
 
 export default Ember.Mixin.create({
   imageUrl: Ember.computed('template.id', function() {
-    var url = this.get('PATH_TO_IMAGES') + 'templates/' + this.get('template.id') + '/original.jpg';
     return this.get('PATH_TO_IMAGES') + 'placeholders/' + 'card-skeleton.png';
   }),
   state: Ember.computed('template.is_selected', function() {

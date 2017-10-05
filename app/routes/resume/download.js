@@ -6,6 +6,6 @@ export default Ember.Route.extend(UserMixin, {
     return this.model().get('header.name') + ' Resumé';
   },
   model: function() {
-    return this.get('user');;
+    return this.get('user');
   }
 });

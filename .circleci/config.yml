@@ -1,0 +1,40 @@
+version: 2
+jobs:
+  build:
+    steps:
+      - checkout
+      - run:
+          name: Update NPM
+          command: 'sudo npm install -g npm@latest'
+      - run:
+          name: Update Bower
+          command: 'sudo npm install -g bower@latest'
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: Install the NPM dependencies
+          command: npm install
+      - run:
+          name: Install the Bower dependencies
+          command: bower install
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - node_modules
+  test:
+    steps:
+      - checkout
+      - run:
+          name: Test
+          command: npm test
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build
+      - test:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master

@@ -12,14 +12,14 @@ export default Ember.Component.extend({
     this.startObservingInput();
   },
   startObservingInput: function() {
-    var e = $('#' + this.elementId + ' input')
+    var e = Ember.$('#' + this.elementId + ' input');
 
     e.on('focus', function() {
-      $('.template .overlay').addClass('active');
+      Ember.$('.template .overlay').addClass('active');
     });
 
     e.on('blur', function() {
-      $('.template .overlay').removeClass('active');
+      Ember.$('.template .overlay').removeClass('active');
     });
   },
   actions: {
@@ -28,7 +28,7 @@ export default Ember.Component.extend({
       var self = this;
 
       setTimeout(function() {
-        var elem = $('#' + self.elementId + ' .auto-mode input');
+        var elem = Ember.$('#' + self.elementId + ' .auto-mode input');
 
         if (elem && elem.length) {
           elem.focus();
@@ -38,7 +38,7 @@ export default Ember.Component.extend({
       }, 100);
     },
     edit: function() {
-      $('#' + this.elementId + ' .auto-mode input').focus();
+      Ember.$('#' + this.elementId + ' .auto-mode input').focus();
     },
     remove: function() {
       this.set('content', null);

@@ -1,7 +1,8 @@
 # You Rockstar
 
+[![Build Status](https://travis-ci.org/iorrah/you-rockstar.svg?branch=master)](https://travis-ci.org/iorrah/you-rockstar) [![Code Climate](https://codeclimate.com/github/iorrah/you-rockstar/badges/gpa.svg)](https://codeclimate.com/github/iorrah/you-rockstar) [![Test Coverage](https://codeclimate.com/github/iorrah/you-rockstar/badges/coverage.svg)](https://codeclimate.com/github/iorrah/you-rockstar/coverage) [![Issue Count](https://codeclimate.com/github/iorrah/you-rockstar/badges/issue_count.svg)](https://codeclimate.com/github/iorrah/you-rockstar)
+
 This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
 
 ## Prerequisites
 
