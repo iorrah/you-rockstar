@@ -16,7 +16,9 @@ engines:
 ratings:
   paths:
   - app/**/*.html
+  - app/**/*.hbs
   - app/**/*.js
   - app/**/*.scss
 exclude_paths:
-- app/js/affix.js
+- vendor/js/**.js
+- vendor/css/**.css

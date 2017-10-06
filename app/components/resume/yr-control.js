@@ -26,9 +26,9 @@ export default Ember.Component.extend({
       var options = {
         color: '#00c851',
         secondaryColor: '#1fc1c8'
-      }
+      };
 
-      var init = new Switchery(elem, options);
+      new Switchery(elem, options);
     }
   },
   startObservingKeys: function() {
@@ -46,7 +46,11 @@ export default Ember.Component.extend({
     Ember.$('.control-state').click(function() {
       var $checked = $radios.filter(':checked');
       var $next = $radios.eq($radios.index($checked) + 1);
-      if (!$next.length) $next = $radios.first();
+
+      if (!$next.length) {
+        $next = $radios.first();
+      }
+
       $next.prop('checked', true);
     });
   },
@@ -65,8 +69,8 @@ export default Ember.Component.extend({
 
     for (i; i < size; i++) {
       var e = items[i];
-      var isThisSelected = (e.get('id') == id);
-      var isThisLast = (i + 1) == size;
+      var isThisSelected = (e.get('id') === id);
+      var isThisLast = (i + 1) === size;
 
       if (isThisSelected) {
         if (isThisLast) {
@@ -88,8 +92,8 @@ export default Ember.Component.extend({
 
     for (i; i >= 0; i--) {
       var e = items[i];
-      var isThisSelected = (e.get('id') == id);
-      var isThisLast = (i == 0);
+      var isThisSelected = (e.get('id') === id);
+      var isThisLast = (i === 0);
 
       if (isThisSelected) {
         if (isThisLast) {
@@ -128,7 +132,7 @@ export default Ember.Component.extend({
           setPrev: function() {
             self.send('selectTemplate', self.getPrev('template'));
           }
-        }
+        };
       },
       theming: function() {
         return {
@@ -138,9 +142,9 @@ export default Ember.Component.extend({
           setPrev: function() {
             self.send('selectPalette', self.getPrev('palette'));
           }
-        }
+        };
       }
-    }
+    };
   },
   actions: {
     next: function() {
