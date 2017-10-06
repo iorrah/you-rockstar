@@ -5,6 +5,6 @@ moduleForAcceptance('Acceptance | launch app');
 
 test('launch app', function(assert) {
   visit('/');
-  click('.navbar a:last-child');
+  click('.navbar a#btn-launch-app');
   andThen(() => assert.equal(currentURL(), '/resume/edit'));
 });
