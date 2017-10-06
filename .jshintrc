@@ -5,7 +5,8 @@
     "-Promise",
     "$",
     "Mousetrap",
-    "Switchery"
+    "Switchery",
+    "require"
   ],
   "browser": true,
   "boss": true,
