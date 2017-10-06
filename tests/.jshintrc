@@ -24,7 +24,8 @@
     "currentRouteName",
     "$",
     "Mousetrap",
-    "Switchery"
+    "Switchery",
+    "require"
   ],
   "node": false,
   "browser": false,
