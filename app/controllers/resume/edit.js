@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   resume: Ember.inject.controller(),
-  templateComponentName: Ember.computed(function() {
+  templateComponentName: Ember.computed('resume.template', function() {
     return 'yr-templates/yr-template-' + this.get('resume.template.id');
   }),
   actions: {

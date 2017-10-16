@@ -31,22 +31,20 @@ export default Ember.Controller.extend(TemplatesMixin, PalettesMixin, ScrollToEl
     return { pick, edit, download };
   }),
   disselectTemplate: function(template) {
-    template.set('is_selected', false);
-    template.set('is_edited', false);
-    template.set('wont_edit', false);
+    Ember.set(template, 'is_selected', false);
   },
   actions: {
     selectTemplate: function(template) {
-      var tmpts = this.get('templates');
-      var size = tmpts.get('length');
+      var templates = this.get('templates');
+      var size = templates.get('length');
 
-      for (var i = size - 1; i >= 0; i--) {
-        var tmpt = tmpts[i];
+      for (var i = 0; i < size; i++) {
+        var item = templates.findBy('id', i + 1);
 
-        if (tmpt.get('id') === template.get('id')) {
-          tmpt.set('is_selected', !template.get('is_selected'));
+        if (item.get('id') === template.get('id')) {
+          Ember.set(item, 'is_selected', true);
         } else {
-          this.disselectTemplate(tmpt);
+          this.disselectTemplate(item);
         }
       }
     },
