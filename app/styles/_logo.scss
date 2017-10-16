@@ -6,9 +6,9 @@
   white-space: nowrap;
 
   &.white {
-    color: #fff !important;
+    color: $white !important;
     background: none !important;
-    -webkit-text-fill-color: #fff;
+    -webkit-text-fill-color: $white;
   }
 
   i {

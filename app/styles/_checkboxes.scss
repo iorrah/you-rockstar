@@ -8,7 +8,7 @@ $md-checkbox-top: .23rem;
 
 // Checkmark
 $md-checkmark-width: .13rem;
-$md-checkmark-color: #fff;
+$md-checkmark-color: $white;
 $md-checkmark-size: $md-checkbox-size - (2 * $md-checkbox-padding);
 
 .md-checkbox {
@@ -31,7 +31,7 @@ $md-checkmark-size: $md-checkbox-size - (2 * $md-checkbox-padding);
     &:before {
       width: $md-checkbox-size;
       height: $md-checkbox-size;
-      background-color: #fff;
+      background-color: $white;
       border: $md-checkbox-border-width solid $md-checkbox-border-color;
       border-radius: .09rem;
       cursor: pointer;

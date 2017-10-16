@@ -26,14 +26,14 @@
       }
 
       .counter {
-        top: -0.1rem;
+        top: -.1rem;
       }
     }
 
     .counter {
       font-size: 1.5rem;
       font-weight: 400;
-      color: #fff;
+      color: $white;
       position: absolute;
       left: -6.55rem;
       line-height: normal;

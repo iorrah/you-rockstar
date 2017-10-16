@@ -4,7 +4,7 @@
   position: relative;
 
   &:hover {
-    outline: 1px dotted rgba(255, 255, 255, 0.5);
+    outline: 1px dotted rgba(255, 255, 255, .5);
 
     .tools {
       &,
@@ -18,7 +18,7 @@
     width: 100%;
 
     &:hover {
-      outline: 1px dotted rgba(0, 0, 0, 0.5);
+      outline: 1px dotted rgba(0, 0, 0, .5);
     }
 
     &,
@@ -58,7 +58,7 @@
       }
 
       &:focus {
-        background-color: #fff;
+        background-color: $white;
         color: $cinder;
         border-color: transparent;
         padding: 1rem 1.2rem;
@@ -127,5 +127,5 @@
   z-index: 1;
   transition: background-color .9s ease-in-out;
 
-  &.active { background-color: rgba(0, 0, 0, 0.58); }
+  &.active { background-color: rgba(0, 0, 0, .58); }
 }
