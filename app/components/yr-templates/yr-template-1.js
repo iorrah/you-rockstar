@@ -1,10 +1,4 @@
 import Ember from 'ember';
-import ConstantsMixin from 'you-rockstar/mixins/constants';
-import TemplateStateMixin from 'you-rockstar/mixins/template/state';
-import UserMixin from 'you-rockstar/mixins/data/user';
+import DependenciesMixin from 'you-rockstar/mixins/template/dependencies';
 
-export default Ember.Component.extend(
-  ConstantsMixin,
-  TemplateStateMixin,
-  UserMixin
-);
+export default Ember.Component.extend(DependenciesMixin);

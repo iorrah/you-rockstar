@@ -16,10 +16,10 @@ $offset: 40rem;
 
 #wrapper {
     padding-right: 0;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
     height: 100%;
     position: relative;
 }
@@ -33,15 +33,15 @@ $offset: 40rem;
     position: absolute;
     right: 0;
     height: 100%;
-    background: #000;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+    background: $black;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
     overflow: hidden;
 
-    box-shadow: -2px 0 5px 0 rgba(0, 0, 0, 0.16),
-                -2px 0 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: -2px 0 5px 0 rgba(0, 0, 0, .16),
+                -2px 0 10px 0 rgba(0, 0, 0, .12);
 
 }
 
@@ -141,8 +141,8 @@ $offset: 40rem;
         &:last-child  { border-bottom-left-radius: .25rem; }
         &:last-child  { border-bottom-right-radius: .25rem; }
 
-        &.light p { color: rgba(0, 0, 0, 0.37) }
-        &.dark p  { color: rgba(255, 255, 255, 0.1); }
+        &.light p { color: rgba(0, 0, 0, .37) }
+        &.dark p  { color: rgba(255, 255, 255, .1); }
       }
     }
   }
@@ -151,15 +151,15 @@ $offset: 40rem;
 .sidebar-nav li a.active,
 .sidebar-nav li a:hover {
     text-decoration: none;
-    color: #fff;
+    color: $white;
 }
 
 .sidebar-nav li a.active {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, .2);
 }
 
 .sidebar-nav li a:hover {
-    background: rgba(255, 255, 255, 0.04);
+    background: rgba(255, 255, 255, .04);
 }
 
 .sidebar-nav li a.active {
@@ -175,7 +175,7 @@ $offset: 40rem;
 }
 
 .sidebar-nav .sidebar-close {
-  a { color: #fff !important; }
+  a { color: $white !important; }
 
   span {
     font-weight: 300;
@@ -201,7 +201,7 @@ $offset: 40rem;
     color: #999999;
 
     &:hover {
-      color: #fff;
+      color: $white;
       background: none;
     }
   }

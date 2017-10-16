@@ -1,7 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Cinzel|Nunito|Lato');
-
 .template-2 {
-  background-color: #fff;
+  background-color: $white;
   padding: 0 15px;
 
   &.palette-3 {
@@ -18,7 +16,7 @@
       background-position: center center;
       background-size: cover;
 
-      h1 { color: #fff; }
+      h1 { color: $white; }
 
       h2,
       p {
@@ -53,7 +51,7 @@
     }
 
     .col-right {
-      background-color: #fff;
+      background-color: $white;
 
       h1 { color: #212529; }
       h2 { color: #464646; }
@@ -153,13 +151,13 @@
 
   h1,
   h2 {
-    font-family: 'Nunito', sans-serif;
+    font-family: $nunito;
   }
 
   h3,
   p,
   li {
-    font-family: 'Lato', sans-serif;
+    font-family: $lato;
   }
 
   p,

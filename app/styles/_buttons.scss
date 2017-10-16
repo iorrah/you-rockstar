@@ -11,9 +11,9 @@
   &.btn-not-rounded { border-radius: 0; }
 
   &.btn-transparent {
-    border: 1px solid #fff;
+    border: 1px solid $white;
     background-color: transparent;
-    color: #fff !important;
+    color: $white !important;
 
     &:hover {
       background-color: rgba(255, 255, 255, 0.14);
@@ -22,7 +22,7 @@
 
   &.btn-meteor {
     border: 1px solid transparent;
-    color: #fff !important;
+    color: $white !important;
 
     &,
     &:hover {
@@ -32,7 +32,7 @@
 
   &.btn-h20 {
     border: 1px solid transparent;
-    color: #fff !important;
+    color: $white !important;
 
     &,
     &:hover {
@@ -42,7 +42,7 @@
 
   &.btn-antares {
     border: 1px solid transparent;
-    color: #fff !important;
+    color: $white !important;
 
     &,
     &:hover {
@@ -64,19 +64,19 @@
 
   &.btn-black {
     border: 0;
-    color: #fff !important;
-    background-color: #000;
+    color: $white !important;
+    background-color: $black;
 
     &,
     &:hover {
-      color: #fff !important;
+      color: $white !important;
     }
   }
 
   &.btn-white {
     border: 0;
     color: inherit !important;
-    background-color: #fff;
+    background-color: $white;
 
     &,
     &:hover {

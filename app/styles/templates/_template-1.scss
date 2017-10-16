@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Crimson+Text');
-
 .template-1 {
   padding: 0 15px 4rem;
 
@@ -24,7 +22,7 @@
   }
 
   &.palette-2 {
-    background-color: #fff;
+    background-color: $white;
 
     h1,
     h2 {
@@ -40,7 +38,7 @@
   }
 
   &.palette-8 {
-    background-color: #fff;
+    background-color: $white;
 
     h1,
     h2 {
@@ -56,7 +54,7 @@
   }
 
   &.palette-10 {
-    background-color: #fff;
+    background-color: $white;
 
     h1,
     h2 {
@@ -92,7 +90,7 @@
 
     h2 {
       font-size: 1.4rem;
-      font-family: 'Roboto', sans-serif;
+      font-family: $roboto;
       font-weight: 400;
       line-height: normal;
     }
@@ -128,13 +126,13 @@
   h1,
   h2 {
     text-transform: uppercase;
-    font-family: 'Crimson Text', serif;
+    font-family: $crimson-text;
   }
 
   p,
   h3,
   li {
-    font-family: 'Roboto', sans-serif;
+    font-family: $roboto;
     font-weight: 400;
   }
 
